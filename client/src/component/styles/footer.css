@@ -1,0 +1,22 @@
+.footer {
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 5%;
+    column-gap: 10%;
+    height: 30vh;
+    background: green;
+}
+
+.hours, .contact {
+    padding-top: 2.5%;
+    flex-direction: column;
+    height: 100%;
+    font-style: italic;
+    color: rgb(206, 206, 206);
+}
+
+.hours > h1, .contact > h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: yellowgreen;
+}

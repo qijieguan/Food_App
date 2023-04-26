@@ -1,0 +1,67 @@
+.header {
+    position: relative;
+    padding: 2vh 2vw;
+    min-height: 17.5vh;
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+.header-scroll {
+    position: fixed;
+    padding: 1vh 2vw;
+    inset: 0 auto auto 0;
+    row-gap: 1vh;
+    justify-content: space-evenly;
+    column-gap: 5vw;
+    min-height: 17.5vh;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid grey;
+    z-index: 1;
+}
+
+.logo-image {
+    height: 15vh;
+    width: 15vh;
+    object-fit: cover;
+}
+
+.nav {
+    justify-content: center;
+    column-gap: 5vw;
+}
+
+.nav > div {
+    font-size: (0.75rem, 1vw, 1.25rem);
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.order {
+    height: 80%;
+    column-gap: 0.075vw;
+}
+
+.order-button { 
+    padding: min(5vh, 1rem) min(2.5vw, 1rem); 
+    column-gap: 1vw;
+    color: white;
+    background: green;
+    border-radius: 0.25rem;
+}
+
+.order-button > span {
+    font-size: (0.75rem, 1vw, 1.25rem);
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.fast-food-icon, .car-side-icon {
+    font-size: 2rem;
+}
+
+@media (max-width: 50rem) {
+    .header-scroll {  flex-wrap: wrap; }
+    .order {column-gap: 3vw; }  
+}
+
