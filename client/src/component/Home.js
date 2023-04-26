@@ -19,9 +19,17 @@ const Home = () => {
         quote: 'Well Seasoned',
         image: 'https://images.pexels.com/photos/13999216/pexels-photo-13999216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
         name: '8 PC Flavored Wings',
-        content: 'Freshly made 8 piece wings with a choice of 4 flavors and 1 dip',
+        content: 'Freshly cooked 8 piece wings with a choice of 4 flavors, lemon pepper, buffalo, honey garlic, honey BBQ and 1 side dip',
         price: 6.99,
-        calories: 849
+        calories: 649
+      },
+      {
+        quote: 'Value Per Wing',
+        image: 'https://res.cloudinary.com/dliw7yyw3/image/upload/v1682547285/Food/chicken-wings-take-out_weymea.jpg',
+        name: '15 PC Flavored Wings',
+        content: 'Freshly cooked 15 piece wings with a choice of 4 flavors, lemon pepper, buffalo, honey garlic, honey BBQ',
+        price: 10.99,
+        calories: 1049
       },
       {
         quote: 'Get your protein',
@@ -38,6 +46,14 @@ const Home = () => {
         content: '8 PC Chickens Nuggets served with 3 dips of your choice, ranch, honey mustards, and ketchup',
         price: 3.49,
         calories: 429
+      },
+      {
+        quote: 'Munch and Crunch!',
+        image: 'https://res.cloudinary.com/dliw7yyw3/image/upload/v1682546868/Food/organic-crispy-chicken-strips_avrvj5.jpg',
+        name: 'Chicken Strips Bowl',
+        content: '4 PC Chicken Strips served with medium portion fries and 1 dip of your choice, ranch, honey mustards, and ketchup',
+        price: 3.99,
+        calories: 729
       }
     ];
 
@@ -63,7 +79,7 @@ const Home = () => {
     });
 
     const startPlay = () => {
-      autoplay = setInterval(scrollRight, 5000);
+      autoplay = setInterval(scrollRight, 10000);
     }
 
     const init = () => {
