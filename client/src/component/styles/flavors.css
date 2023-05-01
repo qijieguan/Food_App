@@ -1,0 +1,88 @@
+.flavors {
+    grid-template-columns: 30% 30% 30%;
+    flex-direction: column;
+    padding: 0 2vw 10vh 2vw;
+    row-gap: 7.5vh;
+    min-height: 100vh;
+    width: 100%;
+    color: rgb(235, 235, 235);
+    background: black;
+    border-bottom: 3px solid darkgreen;
+}
+
+.flavors-header {
+    margin-top: 20vh;
+    grid-column: 1 / 4;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 2vh;
+    width: 100%;
+    color: rgb(218, 218, 218);
+}
+
+.flavors-header > h1 {
+    margin: 2vh 0;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.flavor {
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 2vh 1vw;
+    min-height: 45vh;
+    width: 75%;
+    box-shadow: 0 0 3px gray;
+    border-radius: 0.25rem;
+}
+
+.flavor-label {
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    font-weight: bolder;
+    font-style: italic;
+    color: rgb(235, 235, 235);
+}
+
+.flavor-icon {
+    margin: 2vh 0;
+    justify-content: center;
+    height: 12vh;
+    width: 12vh;
+    background: green;
+    border-radius: 4rem;
+    box-shadow: 0 0 2px;
+}
+
+.flavor-rating { justify-content: center; width: 100%; }
+
+.flavor-rating * { font-size: 1.5rem; }
+
+.flavor-icon * {
+    font-size: clamp(3rem, 4vw, 4rem);
+}
+
+.flavor-detail {
+    text-align: center;
+    font-weight: 300;
+    font-size: clamp(0.875rem, 1.125vw, 1.125rem);
+    width: 90%;
+    color: rgb(235, 235, 235);
+}
+
+@media (max-width: 75rem) { 
+    .flavors-header { margin-top: 7.5vh; }
+    .flavor { width: 90%; }   
+}
+
+@media (max-width: 50rem) {
+    .flavors { grid-template-columns: 49% 49%; }
+    .flavors-header { grid-column: 1 / 3; }   
+    .flavor { width: 95%; }   
+}
+
+@media (max-width: 25rem) {
+    .flavors { grid-template-columns: 100%; }
+    .flavors-header { grid-column: 1 / 2; }      
+}
+

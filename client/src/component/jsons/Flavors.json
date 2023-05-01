@@ -1,0 +1,52 @@
+{
+    "flavors" : [
+        {
+            "src": "",
+            "label": "Lemon Pepper",
+            "rating": 1,
+            "description": "Zesty lemon and black pepper seasonings. This seasoning is a signature for wings."
+        },
+        {
+            "src": "",
+            "label": "Classic Hot",
+            "rating": 3,
+            "description": "Potent spice and medium heat. Exciting experience of enjoying hot wings"
+        },
+        {
+            "src": "",
+            "label": "Honey Garlic",
+            "rating": 1,
+            "description": "Honey glazed with mild garlic tastes. Bites of sweetness and richness."
+        },
+        {
+            "src": "",
+            "label": "Honey BBQ",
+            "rating": 2,
+            "description": "A little bit of sweet with tang. A comfortable flavor is all that you need."
+        },
+        {
+            "src": "",
+            "label": "Mango Habanero",
+            "rating": 4,
+            "description": "Flavorful blend of sweet and spicy. Seriously, you will feel the burn."
+        },
+        {
+            "src": "",
+            "label": "Garlic Parmeson",
+            "rating": 0,
+            "description": "Mixes of savory garlic and buttery parmeson. Delicious seasoning for your bites."
+        },
+        {
+            "src": "",
+            "label": "Mild",
+            "rating": 2,
+            "description": "Classic hot but less spice. Just a bit of spice is fine."
+        },
+        {
+            "src": "",
+            "label": "Plain",
+            "rating": 0,
+            "description": "No flavor added. We respect your preference."
+        }
+    ]
+}

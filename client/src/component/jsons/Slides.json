@@ -1,0 +1,52 @@
+{
+    "slides": [
+        {
+            "label": "Chicken Sandwich Combo",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682011805/Food/istockphoto-585602290-612x612_zetzgm.jpg",
+            "quote": "Most Popular",
+            "content": "1 Chicken Sandwich of the choice regular or spicy flavor and 1 large cold drink",
+            "price": 8.99,
+            "calories": 900
+        },
+        {
+            "label": "8 PC Flavored Wings",
+            "image": "https://images.pexels.com/photos/13999216/pexels-photo-13999216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "quote": "Well Seasoned",
+            "content": "Freshly cooked 8 PC wings with 1 flavor of the choices, lemon pepper, buffalo, honey garlic, or honey BBQ and 1 dip",
+            "price": 6.99,
+            "calories": 649
+        },
+        {
+            "label": "15 PC Flavored Wings",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682547285/Food/chicken-wings-take-out_weymea.jpg",
+            "quote": "Value Per Wing",
+            "content": "Freshly cooked 15 PC wings with 1 flavor of the choices, lemon pepper, buffalo, honey garlic, or honey BBQ",
+            "price": 10.99,
+            "calories": 1049
+        },
+        {
+            "label": "15 Boneless Wings",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682580788/Food/honey-barbecue-boneless-wings_osewm1.jpg",
+            "quote": "Flavorful Bites",
+            "content": "15 PC Boneless Wings with 1 flavor of your choices, lemon pepper, buffalo, honey garlic, or honey BBQ and 1 dip",
+            "price": 9.99,
+            "calories": 1089
+        },
+        {
+            "label": "8 PC Chicken Nuggets",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682030450/Food/fried-chicken-nuggets-on-white-background_u9s9dw.jpg",
+            "quote": "Eat them up. Eat them up!",   
+            "content": "8 PC Chickens Nuggets served with 2 dips of the choices, ranch, honey mustards, or ketchup",
+            "price": 3.49,
+            "calories": 429
+        },
+        {
+            "label": "Chicken Strips Bowl",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682546868/Food/organic-crispy-chicken-strips_avrvj5.jpg",
+            "quote": "Munch and Crunch!",
+            "content": "4 PC Chicken Strips served with medium portion fries and 1 dip of the choices, ranch, honey mustards, or ketchup",
+            "price": 3.99,
+            "calories": 729     
+        }
+    ]
+}

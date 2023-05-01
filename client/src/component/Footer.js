@@ -1,4 +1,6 @@
 import './styles/footer.css';
+import { FiPhoneCall } from 'react-icons/fi';
+import { TfiEmail, TfiLocationPin } from 'react-icons/tfi';
 
 const Footer= () => {
     return (
@@ -10,9 +12,18 @@ const Footer= () => {
             </div>
             <div className='contact flex'>
                 <h1>Contact</h1>
-                <div>qijieguan7@gmail.com</div>
-                <div>626-757-2356</div>
-                <div>Los Angeles County</div>
+                <div className='flex'>
+                    <TfiEmail className='mail-icon'/>
+                    <span>qijieguan7@gmail.com</span>
+                </div>
+                <div className='flex'>
+                    <FiPhoneCall className="phone-icon"/>
+                    <span>626-757-2356</span>
+                </div>
+                <div className='flex'>
+                    <TfiLocationPin className='location-icon'/>
+                    <span>Los Angeles County</span>
+                </div>
             </div>
         </div>
     )

@@ -1,0 +1,104 @@
+.menu-bar { padding: 0.5vh 3vw; }
+
+.menu-icon {
+    font-size: 1.25rem;
+}
+
+.logo-wrapper {
+    margin: 0 auto;
+}
+
+.logo {
+    height: 10vh;
+    width: 10vh;
+}
+
+.menu-bar-dropdown {
+    position: fixed;
+    inset: 0 auto auto 0;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: white;
+    z-index: 1;
+}
+
+.dropdown-header {
+    justify-content: space-between;
+    margin: 5vh 5vw;
+    column-gap: 2.5vw;
+}
+
+.dropdown-header > span {
+    margin-right: auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(63, 63, 63);
+}
+
+.user-icon { height: 5vh; width: 5vh; color: darkgreen; }
+
+.close-icon { height: 4vh; width: 4vh; color: rgb(179, 179, 179); transition: all 0.3s ease-in; }
+.close-icon:hover { transform: rotate(90deg); color: rgb(32, 32, 32); }
+
+.menu-bar-dropdown > img {
+    margin: 0 auto;
+}
+
+.menu-bar-nav {
+    flex-direction: column;
+    border-top: 1px solid rgb(197, 197, 197);
+}
+
+.menu-bar-li {
+    padding: 2vh 0;
+    text-align: center;
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    font-weight: bolder;
+    font-style: italic;
+    width: 100%;
+    color: rgb(63, 63, 63);
+    border: 1px solid rgb(197, 197, 197);
+    border-top: none;
+}
+
+.menu-bar-li:hover {
+    text-underline-position: under;
+    text-decoration: underline 3px;
+}
+
+.dropdown-footer {
+    position: absolute;
+    inset: auto auto 0 0;
+    width: 100%;
+}
+
+.dropdown-footer > button {
+    margin-top: auto;
+    justify-content: center;
+    padding: 2vh 2vw;
+    column-gap: 1vw;
+    width: 50%;
+    color: white;
+    background: darkgreen;
+    border: 1px solid snow;
+}
+
+.dropdown-footer > button > div { margin-top: auto; font-size: clamp(1.125rem, 1.75vw, 1.75rem); }
+.dropdown-footer > button > div > span { font-size: clamp(1.375rem, 2.25vw, 2.25rem); font-weight: bolder; }
+
+@media (max-width: 25rem) {
+    .dropdown-footer > button {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 15rem) {
+    .dropdown-footer {
+        flex-direction: column;
+    }
+    .dropdown-footer > button {
+        width: 100%;
+    }
+}

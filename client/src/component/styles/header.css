@@ -1,29 +1,29 @@
 .header {
     position: relative;
-    padding: 2vh 2vw;
-    min-height: 17.5vh;
     width: 100%;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(190, 190, 190);
 }
 
 .header-scroll {
     position: fixed;
     padding: 1vh 2vw;
     inset: 0 auto auto 0;
-    row-gap: 1vh;
-    justify-content: space-evenly;
+    justify-content: space-around;
     column-gap: 5vw;
-    min-height: 17.5vh;
     width: 100%;
     background: white;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(190, 190, 190);
     z-index: 1;
 }
 
-.logo-image {
+.logo {
     height: 15vh;
     width: 15vh;
-    object-fit: cover;
+}
+
+.logo-image {
+    height: 100%;
+    width: 100%;
 }
 
 .nav {
@@ -31,37 +31,42 @@
     column-gap: 5vw;
 }
 
-.nav > div {
-    font-size: (0.75rem, 1vw, 1.25rem);
-    font-weight: bolder;
-    font-style: italic;
+.nav * {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(63, 63, 63);
 }
 
+.nav *:hover { 
+    text-underline-position: under;
+    text-decoration: underline olivedrab 3px;
+} 
+
 .order {
+    row-gap: 1vh;
     height: 80%;
     column-gap: 0.075vw;
 }
 
 .order-button { 
-    padding: min(5vh, 1rem) min(2.5vw, 1rem); 
+    padding: min(5vh, 0.75rem) min(2.5vw, 0.75rem); 
     column-gap: 1vw;
     color: white;
+    text-transform: uppercase;
+    font-style: italic;
     background: green;
     border-radius: 0.25rem;
 }
 
-.order-button > span {
-    font-size: (0.75rem, 1vw, 1.25rem);
-    font-weight: bolder;
-    font-style: italic;
+.order-button > div > span {
+    font-size: 1.25rem;
+    font-weight: bold;
+    
 }
 
 .fast-food-icon, .car-side-icon {
-    font-size: 2rem;
+    font-size: 1.875rem;
 }
 
-@media (max-width: 50rem) {
-    .header-scroll {  flex-wrap: wrap; }
-    .order {column-gap: 3vw; }  
-}
 

@@ -1,5 +1,5 @@
 
-.slide { height: 90vh; width: 50vw; scroll-snap-align: start; }
+.slide { width: 50%; scroll-snap-align: start; }
 
 .slide-wrapper {
     margin: 0 7.5vw;
@@ -10,7 +10,6 @@
 .slide-wrapper * { width: 100%; }
 
 .slide-quote {
-    margin-top: 1vh;
     font-size: 1.125rem;
     font-weight: 500;
     color: rgb(36, 36, 36);
@@ -21,15 +20,17 @@
     object-fit: cover;
 }
 
-.slide-name {
-    margin: 0.5vh 0 0 0;
-    font-size: 1.5rem;
+.slide-label {
+    padding: 0;
+    margin: 0;
+    font-size: clamp(1.25rem, 1.875vw, 1.875rem);
     font-weight: bolder;
     font-style: italic;
+    text-transform: uppercase;
 }
 
 .slide-content {
-    margin-top: 1vh;
+    font-size: clamp(0.875rem, 1.25vw, 1.25rem);
     font-weight: 300;
     color: gray;
 
@@ -41,36 +42,39 @@
 }
 
 .slide-button {
-    margin-top: 2vh;
-    padding: 1vh 0;
+    padding: 1vh 2vw;
     justify-content: center;
     column-gap: 2vw;
     height: 10vh;
     width: 100%;
     color: white;
-    background: rgb(0, 143, 0);
+    background: darkgreen;
     border-radius: 0.25rem;
 }
 
 .slide-button > span {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
     font-weight: bold;
     font-style: italic;
+    text-transform: uppercase;
     width: fit-content;
 }
 
 .arrow-right-icon {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 1.5vw, 1.5rem);
     width: fit-content;
 }
 
 @media (max-width: 50rem) {
-    .slide { width: 100vw; }
-    .slide-wrapper { margin-left: 10vw; width: 80vw; }
+    .slide { width: 100%; }
+    .slide-wrapper { margin: 0 10vw; width: 80vw; }
 }
 
 @media (max-width: 25rem) {
-    .slide-wrapper { margin-left: 0.5vw; width: 99vw; }
-    .slide-button > span { font-size: 1.125rem; }
+    .slide { padding: 1vh 0; box-shadow: 0 0 3px rgb(133, 133, 133); }
+    .slide-wrapper { margin: 0; width: 100vw; height: fit-content; }
+    .slide-image { height: 30%; }
+    .slide-quote, .slide-label, .slide-content { padding: 0 2vw; }
+    .slide-button { margin: 0 auto; width: 95%; }
     .arrow-right-icon { font-size: 1.5rem; }
 }
