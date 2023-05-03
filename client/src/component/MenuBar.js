@@ -25,20 +25,26 @@ const MenuBar = () => {
                 </div>
                 
                 <div className='menu-bar-nav flex'>
-                <Link to='/' className='menu-bar-li' onClick={() => { setDropdown(false)} }></Link>
                     <Link to='/Menu' className='menu-bar-li' onClick={() => { setDropdown(false)} }>Our Menu</Link>
                     <Link to='/Flavors' className='menu-bar-li' onClick={() => { setDropdown(false)} }>Flavors</Link>
                     <div className='menu-bar-li' onClick={() => { setDropdown(false)} }>About Our Food</div>
+                    <div className='menu-bar-li' onClick={() => { setDropdown(false)} }>Locations</div>
                 </div>
 
                 <div className='dropdown-footer flex'>
                         <button className='flex'>
-                            <div>Order <span>Carryout</span></div>
                             <MdFastfood className='fast-food-icon'/>
+                            <div className="flex">
+                                <span>Order</span> 
+                                <span>Carryout</span>
+                            </div>
                         </button>
                         <button className='flex'>
-                            <div className>Order <span>Delivery</span></div>
                             <FaCarSide className='car-side-icon'/>
+                            <div className="flex">
+                                <span>Order</span> 
+                                <span>Delivery</span>
+                            </div>
                         </button>
                     </div>
             </div>

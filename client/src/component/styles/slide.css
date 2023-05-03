@@ -25,8 +25,7 @@
     margin: 0;
     font-size: clamp(1.25rem, 1.875vw, 1.875rem);
     font-weight: bolder;
-    font-style: italic;
-    text-transform: uppercase;
+    font-style: oblique;
 }
 
 .slide-content {
@@ -55,8 +54,7 @@
 .slide-button > span {
     font-size: clamp(1rem, 1.25vw, 1.25rem);
     font-weight: bold;
-    font-style: italic;
-    text-transform: uppercase;
+    font-style: oblique;
     width: fit-content;
 }
 

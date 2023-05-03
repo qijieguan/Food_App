@@ -1,0 +1,31 @@
+.menu-item {
+    margin: 0 auto;
+    padding: 1vh 3vw 2vh 3vw;
+    width: 100%;
+    border-right: 1px solid rgb(216, 216, 216);
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.menu-item > h1 {
+    font-size: clamp(1rem, 1.375vw, 1.375rem);
+    font-weight: bold;
+    font-style: oblique;
+    text-decoration: underline;
+}
+
+.menu-item > div {
+    color: grey;
+    font-size: clamp(0.875rem, 1vw, 1.25rem);
+    font-weight: 300;
+}
+
+.menu-button {
+    margin-top: 3vh;
+    padding: 1vh 3vw;
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+    font-weight: bold;
+    font-style: oblique;
+    color: white;
+    background: darkgreen;
+    border-radius: 0.5rem;
+}

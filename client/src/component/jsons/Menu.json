@@ -1,0 +1,163 @@
+{
+    
+    "chicken_sandwiches": [
+        {
+            "label": "Chicken Sandwhich",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1683064899/Food/chicken-bacon-club-sandwich_by6r1l.jpg",
+            "content": "1 crispy chicken sandwich with lettuce, tomato, and cheese and 1 flavor",
+            "price": 0,
+            "calories": 0
+        },
+        {
+            "label": "Chicken Sandwhich Combo",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682011805/Food/istockphoto-585602290-612x612_zetzgm.jpg",
+            "content": "1 crispy chicken sandwich with combo with small fries, soda, 1 flavor and 1 dip",
+            "price": 0,
+            "calories": 0
+        }
+    ],
+
+    "specials": [
+        {
+            "label": "8 PC Chicken Nuggets",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682030450/Food/fried-chicken-nuggets-on-white-background_u9s9dw.jpg",
+            "content": "8 chicken nuggets served with 2 dips of ranch, honey mustards, or ketchup",
+            "price": 3.49,
+            "calories": 429
+        },
+        {
+            "label": "Chicken Strips Bowl",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682546868/Food/organic-crispy-chicken-strips_avrvj5.jpg",
+            "content": "4 chicken strips served with medium fries and 2 dips of ranch, honey mustards, or ketchup",
+            "price": 3.99,
+            "calories": 729     
+        },
+        {
+            "label": "10 PC Boneless Wings",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682580788/Food/honey-barbecue-boneless-wings_osewm1.jpg",
+            "content": "10 Boneless Wings with 1 flavor of the choices, lemon pepper, classic hot, honey garlic, or honey BBQ and 1 dip",
+            "price": 0,
+            "calories": 0
+        },
+        {
+            "label": "15 PC Boneless Wings",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682580788/Food/honey-barbecue-boneless-wings_osewm1.jpg",
+            "content": "15 Boneless Wings with 1 flavor of the choices, lemon pepper, classic hot, honey garlic, or honey BBQ and 1 dip",
+            "price": 0,
+            "calories": 0
+        },
+        {
+            "label": "$14.99 20 PC Boneless Wings",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682580788/Food/honey-barbecue-boneless-wings_osewm1.jpg",
+            "content": "20 Boneless Wings with 2 flavor of lemon pepper, classic hot, honey garlic, or honey BBQ and 1 dip",
+            "price": 0,
+            "calories": 0
+        }
+    ],
+    
+    "wings_combo": [
+        {
+            "label": "$6.99 Small 8 PC Wings Combo",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682583987/Food/DEL2022-648012_Traditional_Boneless_PepsiGlass_Silo_4000x3000_ujsthc.png",
+            "content": "8 boneless or classic (bone-in) wings with 1 flavor, regular or garlic fries,  small drink, and 1 dip.",
+            "price": 0,
+            "calories": 0
+        },
+        {
+            "label": "$8.99 Small 10 PC Wings Combo",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682583987/Food/DEL2022-648012_Traditional_Boneless_PepsiGlass_Silo_4000x3000_ujsthc.png",
+            "content": "10 boneless or classic (bone-in) wings with 1 flavor, regular or garlic fries, small drink, and 1 dip.",
+            "price": 0,
+            "calories": 0
+        },
+        {
+            "label": "$12.99 Small 15 PC Wings Combo",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682583987/Food/DEL2022-648012_Traditional_Boneless_PepsiGlass_Silo_4000x3000_ujsthc.png",
+            "content": "15 boneless or classic (bone-in) wings with 1 flavor, regular or garlic fries,  small drink, and 1 dip.",
+            "price": 0,
+            "calories": 0
+        }
+    ],
+
+    "wings_by_piece": [
+        {
+            "label": "8 PC Classic Wings",
+            "image": "https://images.pexels.com/photos/13999216/pexels-photo-13999216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "content": "8 classic (bone-in) wings with 1 flavor of lemon pepper, classic hot, honey garlic, or honey BBQ",
+            "price": 0,
+            "calories": 0
+        },
+        {
+            "label": "15 PC Classic Wings",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682547285/Food/chicken-wings-take-out_weymea.jpg",
+            "content": "15 classic (bone-in) wings with 1 flavor of lemon pepper, classic hot, honey garlic, or honey BBQ",
+            "price": 0,
+            "calories": 0
+        }
+    ],
+
+    "dips_and_flavors": [
+        {
+            "label": "Classic Hot Sauce",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682582085/Food/yellow-mustard-on-white-background_xf8a01.jpg",
+            "content": "1 classic hot flavor sauce for your wings",
+            "price": 0,
+            "calories": 0
+        },
+        {
+            "label": "Honey Garlic",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682582085/Food/yellow-mustard-on-white-background_xf8a01.jpg",
+            "content": "1 honey garlic flavor sauce for your wings",
+            "price": 0,
+            "calories": 0
+        },
+        {
+            "label": "Honey BBQ",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682582085/Food/yellow-mustard-on-white-background_xf8a01.jpg",
+            "content": "1 honey BBQ flavor sauce for your wings",
+            "price": 0,
+            "calories": 0
+        }
+    ],
+
+    "sides": [
+        {
+            "label": "Regular Fries",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1683066459/Food/french-fries-in-a-white-paper-box-isolated-on-white_dogvvr.jpg",
+            "content": "Regular fries served in small, medium, or large size",
+            "price": 0,
+            "calories": 0
+        },
+        {
+            "label": "Garlic Fries",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1683066459/Food/french-fries-in-a-white-paper-box-isolated-on-white_dogvvr.jpg",
+            "content": "Garlic fries served in small, medium, or large size",
+            "price": 0,
+            "calories": 0
+        },
+        {
+            "label": "Mashed Potatos and Gravy",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682583615/Food/425063_u8i34i.png",
+            "content": "Mashed potatos and gravy served in small, medium, or large size",
+            "price": 0,
+            "calories": 0
+        },
+        {
+            "label": "Mac and Cheese",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1683066764/Food/classic-stovetop-macaroni-and-cheese-on-a-white-background_j9cflb.jpg",
+            "content": "Mac and cheese served in a small, medium, or large size",
+            "price": 0,
+            "calories": 0
+        }
+    ],
+
+    "drinks": [
+        {
+            "label": "Soda",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682582713/Food/intro-1672878791_yj8rge.webp",
+            "content": "1 soda drink served in a small, medium, or large cup",
+            "price": 0,
+            "calories": 0
+        }
+    ]
+}

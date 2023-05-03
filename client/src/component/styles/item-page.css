@@ -1,0 +1,94 @@
+.item-page {
+    margin-top: 17.5vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.item-header {
+    padding: 0 5vw;
+    margin-right: 3vw;
+    min-height: 5vh;
+    width: 80%;
+    column-gap: 1vw;
+    row-gap: 1vh;
+}
+
+.item-header * { 
+    text-transform: capitalize; 
+    font-size: clamp(1rem, 1.5vw, 1.5rem); 
+    font-weight: 100; 
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(122, 122, 122); 
+}
+
+.menu-link:hover { color: olivedrab; text-decoration: underline; text-underline-offset: under; }
+
+.item-header > div { padding-left: 1vw; border-left: 1px solid; }
+
+.item-left {
+    padding: 0 5vw;
+    max-height: 80%;
+    max-width: 40%;
+    object-fit: cover;
+}
+
+.item-right {
+    margin-left: 3vw;
+    padding: 0 5vw;
+    max-width: 45%;
+}
+
+.item-right-label {
+    margin: 5vh 0;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+.item-right-content {
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+    font-weight: 300;
+    color: rgb(56, 56, 56);
+}
+
+.item-right > button {
+    margin-top: 5vh;
+    padding: 2vh 5vw;
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+    font-weight: bolder;
+    font-style: oblique;
+    width: 100%;
+    color: white;
+    background: green;
+    box-shadow: 0 0 3px rgb(231, 231, 231);
+    border-radius: 0.25rem;
+} 
+
+.item-footer {
+    margin: 5vh auto 0 auto;
+    padding: 5vh 10vw;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    background: rgb(219, 219, 219);
+}
+
+.item-footer > h1 {
+    font-weight: 300;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    width: 75%;
+    color: rgb(59, 59, 59);
+}
+
+@media (max-width: 75rem) {
+    .item-page { margin-top: 5vh; }
+}
+
+@media (max-width: 50rem) {
+    .item-header { margin-right: 0; margin-bottom: 5vh; padding: 0 2vw; column-gap: 2vw; flex-wrap: wrap; width: 100%; }
+    .item-header > div { padding-left: 2vw; }
+    .item-left { max-width: 100%; }
+    .item-right { margin-left: 0; max-width: 100%; }
+}

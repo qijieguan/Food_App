@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     row-gap: 5vh;
     background: black;
+    border-top: 3px solid darkgreen;
 }
 
 .hours, .contact {
@@ -16,20 +17,30 @@
     color: grey;
 }
 
-.hours > h1, .contact > h1 {
+.hours-label, .contact-label {
     margin: 0.5vh 0;
     margin-right: auto;
-    font-size: clamp(1.25rem, 1.75vw, 1.75rem);
-    font-weight: bold;
-    font-style: italic;
+    column-gap: 0.75vw;
     color: rgb(180, 180, 180);
 }
+
+.hours-label > span, .contact-label > span, .fire-icon {
+    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.fire-icon { color: red; }
 
 .hours > div, .contact > div {
     margin-right: auto;
     justify-content: center;
-    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-size: clamp(0.875rem, 1vw, 1rem);
     color: rgb(141, 141, 141);
+}
+
+.contact > div > span {
+    font-size: clamp(0.875rem, 1vw, 1rem);
 }
 
 .mail-icon, .phone-icon, .location-icon {

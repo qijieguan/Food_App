@@ -1,7 +1,7 @@
 import './styles/slider.css';
 import Slide from './Slide.js';
 import { useEffect } from 'react';
-import { RxDoubleArrowLeft, RxDoubleArrowRight } from 'react-icons/rx';
+import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md';
 import uuid from 'react-uuid';
 import Data from './jsons/Slides.json';
 
@@ -66,7 +66,9 @@ const Slider = () => {
         slider.scrollLeft =  getClonesWidth();
       }
       else if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth) {
-        slider.scrollLeft = getClonesWidth() - slider.offsetWidth;
+        setTimeout(() => {
+          slider.scrollLeft = getClonesWidth() - slider.offsetWidth;
+        }, 50);
       }    
     }
 
@@ -84,9 +86,7 @@ const Slider = () => {
             {featured_items.length ? 
                 featured_items.map(item => 
                     <Slide item={item} key={uuid()} /> 
-                )
-                :
-                ""
+                ) : ""
             }
         
             <div className='nav-arrows'>
@@ -95,14 +95,14 @@ const Slider = () => {
                 onMouseEnter={() => { clearInterval(autoplay); }} 
                 onMouseLeave={() => { startPlay() }}
                 >
-                <RxDoubleArrowLeft className='left-arrow-icon'/>
+                <MdArrowBackIosNew className='left-arrow-icon'/>
                 </div>
                 <div className='right-arrow flex' 
                   onClick={() => { clearInterval(autoplay); scrollRight(); }}
                   onMouseEnter={() => { clearInterval(autoplay); }} 
                   onMouseLeave={() => { startPlay() }}
                 >
-                <RxDoubleArrowRight className='right-arrow-icon'/>
+                <MdArrowForwardIos className='right-arrow-icon'/>
                 </div>
             </div>
         </div>

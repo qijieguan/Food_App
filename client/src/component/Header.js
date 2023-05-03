@@ -17,10 +17,8 @@ const Header = () => {
 
     useEffect(() => {
 
-        if (!location.hash) {
-            window.scrollTo(0, 0);
-        }
-
+        window.scrollTo(0, 0);
+        
         resizeCheck();
 
         window.addEventListener('resize', (e) => {
@@ -47,15 +45,22 @@ const Header = () => {
                         <Link to='/Menu'>Our Menu</Link>
                         <Link to='/Flavors'>Flavors</Link>
                         <div>About Our Food</div>
+                        <div>Locations</div>
                     </nav>
                     <div className='order flex'>
                         <button className='carryout-button order-button flex'>
-                            <div>Order <span>Carryout</span></div>
                             <MdFastfood className='fast-food-icon'/>
+                            <div className='flex'>
+                                <span>Order </span>
+                                <span>Carryout</span>
+                            </div>
                         </button>
                         <button className='delivery-button order-button flex'>
-                        <div>Order <span>Delivery</span></div>
                             <FaCarSide className='car-side-icon'/>
+                            <div className='flex'>
+                                <span>Order </span>
+                                <span>Delivery</span>
+                            </div>
                         </button>
                     </div>
                 </div>

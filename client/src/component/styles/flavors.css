@@ -7,7 +7,6 @@
     width: 100%;
     color: rgb(235, 235, 235);
     background: black;
-    border-bottom: 3px solid darkgreen;
 }
 
 .flavors-header {
@@ -24,7 +23,7 @@
     margin: 2vh 0;
     font-size: clamp(2rem, 3vw, 3rem);
     font-weight: bolder;
-    font-style: italic;
+    font-style: oblique;
 }
 
 .flavor {
@@ -40,7 +39,7 @@
 .flavor-label {
     font-size: clamp(1.25rem, 1.5vw, 1.5rem);
     font-weight: bolder;
-    font-style: italic;
+    font-style: oblique;
     color: rgb(235, 235, 235);
 }
 

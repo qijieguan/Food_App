@@ -17,7 +17,6 @@
     position: fixed;
     inset: 0 auto auto 0;
     flex-direction: column;
-    justify-content: center;
     height: 100%;
     width: 100%;
     background: white;
@@ -54,9 +53,10 @@
 .menu-bar-li {
     padding: 2vh 0;
     text-align: center;
-    font-size: clamp(1.25rem, 2vw, 2rem);
+    font-size: clamp(1.125rem, 2.25vw, 22.5rem);
     font-weight: bolder;
-    font-style: italic;
+    font-style: oblique;
+    text-transform: uppercase;
     width: 100%;
     color: rgb(63, 63, 63);
     border: 1px solid rgb(197, 197, 197);
@@ -77,16 +77,27 @@
 .dropdown-footer > button {
     margin-top: auto;
     justify-content: center;
-    padding: 2vh 2vw;
-    column-gap: 1vw;
+    padding: 1vh 2vw;
+    column-gap: 2vw;
     width: 50%;
     color: white;
     background: darkgreen;
     border: 1px solid snow;
 }
 
-.dropdown-footer > button > div { margin-top: auto; font-size: clamp(1.125rem, 1.75vw, 1.75rem); }
-.dropdown-footer > button > div > span { font-size: clamp(1.375rem, 2.25vw, 2.25rem); font-weight: bolder; }
+.dropdown-footer > button > div { 
+    margin-top: auto; 
+    flex-direction: column; 
+    align-items: flex-start;
+    letter-spacing: 0.125rem;
+}
+.dropdown-footer > button > div > span:first-child { 
+    font-size: clamp(0.75rem, 1.5vw, 1.25rem);
+}
+.dropdown-footer > button > div > span:last-child { 
+    font-size: clamp(0.875rem, 1.75vw, 1.5rem); 
+    font-weight: bolder; 
+}
 
 @media (max-width: 25rem) {
     .dropdown-footer > button {
