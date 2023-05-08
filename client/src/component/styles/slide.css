@@ -2,9 +2,9 @@
 .slide { width: 50%; scroll-snap-align: start; }
 
 .slide-wrapper {
-    margin: 0 7.5vw;
+    margin: 0 10vw;
     height: 90vh;
-    width: 35vw;
+    width: 30vw;
 }
 
 .slide-wrapper * { width: 100%; }

@@ -1,0 +1,19 @@
+{
+    "markers": [
+        {
+            "name:": "The White House, Washington DC",
+            "latitude": 38.8977,
+            "longitude": -77.0365
+        },
+        {
+            "name:": "Area 51 Air Force",
+            "latitude": 37.2431,
+            "longitude": -115.7930
+        },
+        {
+            "name": "Pentagon Department of Defense",
+            "latitude": 49.4991,
+            "longitude": -119.5937
+        }
+    ]
+}

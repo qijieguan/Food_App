@@ -1,0 +1,100 @@
+.location {
+    position: relative;
+    width: 100%;
+}
+
+.location-wrapper {
+    position: relative;
+    padding-top: 15vh;
+    flex-direction: column;
+    margin-bottom: auto;
+    min-height: 60vh;
+    width: 35%;
+    background: white;
+    box-shadow: 2px 0 3px gray;
+    z-index: 1;
+}
+
+.location-wrapper > h1, .order-options {
+    width: 80%;
+}
+
+.location-wrapper > h1 {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: bolder;
+    font-style: oblique;
+    text-transform: uppercase;
+}
+
+.order-options {
+    position: relative;
+    justify-content: space-around;
+    height: 7.5vh;
+    border: 1px solid;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.carryout, .delivery {
+    position: absolute;
+    top: 0;
+    column-gap: 1vw;
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+}
+
+.carryout { left: 0; }
+.delivery { right: 0; }
+
+.carryout.active, .delivery.active { width: 54%; background: black; color: white; z-index: 1; border-radius: 2rem; }
+
+
+.carryout > span, .delivery > span {
+    font-size: clamp(0.875rem, 1vw, 1.5rem);
+    font-weight: bolder;
+    font-style: oblique;
+    text-transform: uppercase;
+}
+
+.car-side-icon, .fast-food-icon {
+    font-size: clamp(1.25rem, 2vw, 2rem);
+}
+
+.search-results {
+    margin-top: 5vh;
+    min-height: 50vh;
+    justify-content: center;
+    width: 100%;
+    background: rgb(240, 240, 240);
+    border-top: 1px solid rgb(226, 226, 226);
+}
+
+.search {
+    margin: 1.5% 0 auto 0;
+    font-size: 0.875rem;
+    font-weight: 300;
+    width: 80%;
+    color: rgb(22, 22, 22);
+}
+
+@media (max-width: 75rem) {
+    .location-wrapper  {
+        padding-top: 5vh;
+    }
+}
+
+@media (max-width: 50rem) {
+    .car-side-icon, .fast-food-icon { display: none; }
+}
+
+@media (max-width: 35rem) {
+    .location-wrapper { position: absolute; top: 0; left: 0; width: 95%; box-shadow: 1px 1px 3px gray; }
+    .order-options { flex-direction: column; height: 15vh; border-radius: 1rem; }
+    .carryout, .carryout.active, .delivery, .delivery.active {position: relative; width: 100%; border-radius: 0;}
+    .car-side-icon, .fast-food-icon { display: unset; }
+}
+
+@media (max-width: 15rem) {
+    .car-side-icon, .fast-food-icon { display: none; }
+}

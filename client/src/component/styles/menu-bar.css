@@ -1,4 +1,4 @@
-.menu-bar { padding: 0.5vh 3vw; }
+.menu-bar { position: relative; padding: 0.5vh 3vw; z-index: 2; }
 
 .menu-icon {
     font-size: 1.25rem;

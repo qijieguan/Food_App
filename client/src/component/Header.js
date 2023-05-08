@@ -45,7 +45,7 @@ const Header = () => {
                         <Link to='/Menu'>Our Menu</Link>
                         <Link to='/Flavors'>Flavors</Link>
                         <div>About Our Food</div>
-                        <div>Locations</div>
+                        <Link to='/Location'>Locations</Link>
                     </nav>
                     <div className='order flex'>
                         <button className='carryout-button order-button flex'>
