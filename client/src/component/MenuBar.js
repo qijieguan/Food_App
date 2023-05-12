@@ -28,7 +28,7 @@ const MenuBar = () => {
                     <Link to='/Menu' className='menu-bar-li' onClick={() => { setDropdown(false)} }>Our Menu</Link>
                     <Link to='/Flavors' className='menu-bar-li' onClick={() => { setDropdown(false)} }>Flavors</Link>
                     <div className='menu-bar-li' onClick={() => { setDropdown(false)} }>About Our Food</div>
-                    <Link to="/Location" className='menu-bar-li' onClick={() => { setDropdown(false)} }>Locations</Link>
+                    <Link to="/Locations" className='menu-bar-li' onClick={() => { setDropdown(false)} }>Locations</Link>
                 </div>
 
                 <div className='dropdown-footer flex'>

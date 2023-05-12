@@ -1,14 +1,48 @@
-.google-map {
-    height: 100vh;
+#map {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
     width: 65vw;
 }
 
-@media (max-width: 35rem) {
-    .google-map {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        
+.google-map {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#map.expand {
+    width: 100vw;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.3;
+}
+
+.google-map:hover .map-overlay {
+    animation: fadeOut 0.4s forwards;
+}
+
+.marker {
+    position: relative;
+}
+
+
+@keyframes fadeOut {
+    0% { opacity: 0.3; }
+    99% { opacity: 0; }
+    100% { opacity: 0; display: none;  z-index: -1;  }
+}
+
+@media (max-width: 40rem) {
+    #map {
+        width: 100vw;  
     }
 }

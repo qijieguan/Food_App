@@ -53,9 +53,8 @@ const Menu = () => {
                 <img src='https://res.cloudinary.com/dliw7yyw3/image/upload/v1682011805/Food/istockphoto-585602290-612x612_zetzgm.jpg' alt=""/>
                 <h1>Chicken Sandwiches</h1>
                 <div className='menu-dropdown grid' >
-                    {chicken_sandwiches.length ?
+                    {chicken_sandwiches &&
                         chicken_sandwiches.map(item => <MenuItem key={uuid()} item={item} category="chicken sandwiches"/>)
-                        : ""
                     }
                 </div>
             </div>
@@ -64,9 +63,8 @@ const Menu = () => {
                 <img src="https://res.cloudinary.com/dliw7yyw3/image/upload/v1682580788/Food/honey-barbecue-boneless-wings_osewm1.jpg" alt=""/>
                 <h1>Specials</h1>
                 <div className='menu-dropdown grid' >
-                    {specials.length ?
+                    {specials &&
                         specials.map(item => <MenuItem key={uuid()} item={item} category="specials"/>)
-                        : ""
                     }
                 </div>
             </div>
@@ -75,9 +73,8 @@ const Menu = () => {
                 <img src="https://res.cloudinary.com/dliw7yyw3/image/upload/v1682583987/Food/DEL2022-648012_Traditional_Boneless_PepsiGlass_Silo_4000x3000_ujsthc.png" alt=""/>
                 <h1>Wings Combo</h1>
                 <div className='menu-dropdown grid' >
-                    {wings_combo.length ?
+                    {wings_combo &&
                         wings_combo.map(item => <MenuItem key={uuid()} item={item} category="wings combo"/>)
-                        : ""
                     }
                 </div>
             </div>
@@ -86,9 +83,8 @@ const Menu = () => {
                 <img src="https://res.cloudinary.com/dliw7yyw3/image/upload/v1682547285/Food/chicken-wings-take-out_weymea.jpg" alt=""/>
                 <h1>Wings By Piece</h1>
                 <div className='menu-dropdown grid' >
-                    {wings_by_piece.length ?
+                    {wings_by_piece &&
                         wings_by_piece.map(item => <MenuItem key={uuid()} item={item} category="wings by piece"/>)
-                        : ""
                     }
                 </div>  
             </div>
@@ -97,9 +93,8 @@ const Menu = () => {
                 <img src="https://res.cloudinary.com/dliw7yyw3/image/upload/v1682582085/Food/yellow-mustard-on-white-background_xf8a01.jpg" alt=""/>
                 <h1>Dips and Flavors</h1>
                 <div className='menu-dropdown grid' >
-                    {dips_and_flavors.length ?
+                    {dips_and_flavors &&
                         dips_and_flavors.map(item => <MenuItem key={uuid()} item={item} category="dips and flavors"/>)
-                        : ""
                     }
                 </div>
             </div>
@@ -108,9 +103,8 @@ const Menu = () => {
                 <img src="https://res.cloudinary.com/dliw7yyw3/image/upload/v1682583615/Food/425063_u8i34i.png" alt=""/>
                 <h1>Sides</h1>
                 <div className='menu-dropdown grid' >
-                    {sides.length ?
+                    {sides &&
                         sides.map(item => <MenuItem key={uuid()} item={item} category="sides"/>)
-                        : ""
                     }
                 </div>
             </div>
@@ -119,9 +113,8 @@ const Menu = () => {
                 <img src="https://res.cloudinary.com/dliw7yyw3/image/upload/v1682582713/Food/intro-1672878791_yj8rge.webp" alt=""/>
                 <h1>Drinks</h1> 
                 <div className='menu-dropdown grid' >
-                    {drinks.length ?
+                    {drinks &&
                         drinks.map(item => <MenuItem key={uuid()} item={item} category="drinks"/>)
-                        : ""
                     }
                 </div>
             </div>

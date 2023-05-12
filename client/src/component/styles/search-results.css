@@ -1,0 +1,87 @@
+.search-results {
+    margin-top: 5vh;
+    padding-bottom: 5vh;
+    width: 100%;
+    color: rgb(22, 22, 22);
+    background: rgb(240, 240, 240);
+    border-top: 1px solid rgb(226, 226, 226);
+}
+
+.search-list {
+    margin-bottom: auto;
+    flex-direction: column;
+    width: 100%;
+}
+
+.search-empty {
+    margin: 2vh auto auto auto;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+.search {
+    margin: 2vh auto 0 auto;
+    padding: 1vh 1vh;
+    flex-direction: column;
+    min-height: 20vh;
+    width: 90%;
+    background: white;
+    border: 1px solid darkgreen;
+    border-radius: 0.5rem;
+}
+
+.search-name {
+    margin: 0;
+    font-size: clamp(0.875rem, 1.125vw, 1.125rem);
+    color: darkgreen;
+}
+
+.search-address, .search-hours, .search-phone, .search-distance {
+    column-gap: 0.25vw;
+    font-size: 300;
+    color: rgb(92, 92, 92);
+}
+
+.search-address { justify-content: center; column-gap: 0; width: 100%; }
+.location-icon { font-size: 1.4rem; }
+
+.search-hours {
+    margin: auto 0;
+    justify-content: center; 
+    font-style: oblique;
+    color: rgb(22, 22, 22);
+    width: 100%;
+}
+.hours-icon { font-size: clamp(1.125rem, 1.5vw, 1.375rem); }
+.search-hours > span { font-size: clamp(0.875rem, 1.125vw, 1.125rem); }
+
+.search-address > span, .search-phone > span, .search-distance > span {
+    font-size: clamp(0.75rem, 1vw, 1rem);
+}
+
+.search-footer {
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.search-phone, .search-distance {
+    margin-top: auto;
+}
+
+.search-phone {
+    color: darkgreen;
+    text-decoration: underline;
+    text-underline-position: below;
+}
+
+.search-distance {
+    color: black;
+}
+
+.car-icon { font-size: 1.25rem; }
+.search-distance > span { font-size: clamp(0.875rem, 1.125vw, 1.125rem); }
+
+@media (max-width: 25rem) {
+    .search { width: 95%; }
+}

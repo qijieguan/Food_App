@@ -14,9 +14,8 @@ const Flavors = () => {
                 <span>Try different flavors for your clasic wings, classic wings, or cripsy tenders!</span>
             </div>
             
-            {flavors.length ? 
+            {flavors.length &&
                 flavors.map(flavor => <Flavor key={uuid()} flavor={flavor}/> )
-                :''
             }
         </div>
     )

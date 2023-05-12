@@ -1,19 +1,164 @@
 {
     "markers": [
         {
-            "name:": "The White House, Washington DC",
-            "latitude": 38.8977,
-            "longitude": -77.0365
+            "name": "Buffalo Wild Wings, Bronx NY",
+            "address": "193 W 237th St, Bronx, NY 10463",
+            "latitude": 40.88460723187546, 
+            "longitude": -73.90033980423813,
+            "phone": "(718) 549-9453",
+            "hours": {
+                "monday": "10AM-10PM",
+                "tuesday": "10AM-10PM",
+                "wednesday": "10AM-10PM",
+                "thurday": "10AM-10PM",
+                "friday": "10AM-10PM",
+                "saturday": "10AM-10PM",
+                "sunday": "10AM-10PM"
+            }
         },
         {
-            "name:": "Area 51 Air Force",
-            "latitude": 37.2431,
-            "longitude": -115.7930
+            "name": "bb.q Chicken, Houston TX",
+            "address": "8383 Westheimer Rd APT 114, Houston, TX 77063",
+            "latitude": 29.737149758289817, 
+            "longitude": -95.51386743361027,
+            "phone": "(832) 767-0245",
+            "hours": {
+                "monday": "10AM-10PM",
+                "tuesday": "10AM-10PM",
+                "wednesday": "10AM-10PM",
+                "thurday": "10AM-10PM",
+                "friday": "10AM-10PM",
+                "saturday": "10AM-10PM",
+                "sunday": "10AM-10PM"
+            }
         },
         {
-            "name": "Pentagon Department of Defense",
-            "latitude": 49.4991,
-            "longitude": -119.5937
+            "name": "Bonchon Convoy, San Diego CA",
+            "address": "4690 Convoy St Suite 102, San Diego, CA 92111",
+            "phone": "(858) 836-1287",
+            "latitude": 32.82657333279938, 
+            "longitude": -117.15576073347796,
+            "hours": {
+                "monday": "10AM-10PM",
+                "tuesday": "10AM-10PM",
+                "wednesday": "10AM-10PM",
+                "thurday": "10AM-10PM",
+                "friday": "10AM-10PM",
+                "saturday": "10AM-10PM",
+                "sunday": "10AM-10PM"
+            }
+        },
+        {
+            "name": "Crisp, Chicago",
+            "address": "2940 N Broadway, Chicago, IL 60657",
+            "latitude": 41.936268116953, 
+            "longitude": -87.64453693301448,
+            "phone": "(773) 697-7610",
+            "hours": {
+                "monday": "10AM-10PM",
+                "tuesday": "10AM-10PM",
+                "wednesday": "10AM-10PM",
+                "thurday": "10AM-10PM",
+                "friday": "10AM-10PM",
+                "saturday": "10AM-10PM",
+                "sunday": "10AM-10PM"
+            }
+        },
+        {
+            "name": "Zaxby's, Hoover Alabama",
+            "address": "2735 John Hawkins Pkwy, Hoover, AL 35244",
+            "latitude": 33.36403842931694, 
+            "longitude": -86.82701800461847,
+            "phone": "(205) 987-2022",
+            "hours": {
+                "monday": "10AM-10PM",
+                "tuesday": "10AM-10PM",
+                "wednesday": "10AM-10PM",
+                "thurday": "10AM-10PM",
+                "friday": "10AM-10PM",
+                "saturday": "10AM-10PM",
+                "sunday": "10AM-10PM"
+            }
+        },
+        {
+            "name": "Anchor Bar, Buffalo NY",
+            "address": "1047 Main St, Buffalo, NY 14209",
+            "latitude": 42.902529087685274, 
+            "longitude": -78.86850973295918,
+            "phone": " (716) 883-1134",
+            "hours": {
+                "monday": "10AM-10PM",
+                "tuesday": "10AM-10PM",
+                "wednesday": "10AM-10PM",
+                "thurday": "10AM-10PM",
+                "friday": "10AM-10PM",
+                "saturday": "10AM-10PM",
+                "sunday": "10AM-10PM"
+            }
+        },
+        {
+            "name": "Pluckers Wing Bar, Houston TX",
+            "address": "1400 Shepherd Dr, Houston, TX 77007",
+            "latitude": 29.773838863872307, 
+            "longitude": -95.40926010477362,
+            "phone": "(713) 864-9464",
+            "hours": {
+                "monday": "10AM-10PM",
+                "tuesday": "10AM-10PM",
+                "wednesday": "10AM-10PM",
+                "thurday": "10AM-10PM",
+                "friday": "10AM-10PM",
+                "saturday": "10AM-10PM",
+                "sunday": "10AM-10PM"
+            }
+        },
+        {
+            "name": "J Timothy's Taverne, Plainville CT",
+            "address": "143 New Britain Ave, Plainville, CT 06062",
+            "latitude": 41.67818166357868, 
+            "longitude": -72.84735373302901,
+            "phone": "(860) 747-6813",
+            "hours": {
+                "monday": "10AM-10PM",
+                "tuesday": "10AM-10PM",
+                "wednesday": "10AM-10PM",
+                "thurday": "10AM-10PM",
+                "friday": "10AM-10PM",
+                "saturday": "10AM-10PM",
+                "sunday": "10AM-10PM"
+            }
+        },
+        {
+            "name": "Wingnutz, Amherst",
+            "address": "2675 Niagara Falls Blvd, Amherst, NY 14228",
+            "latitude": 43.026621864392744, 
+            "longitude": -78.82176180411678,
+            "phone": "(716) 263-5861",
+            "hours": {
+                "monday": "10AM-10PM",
+                "tuesday": "10AM-10PM",
+                "wednesday": "10AM-10PM",
+                "thurday": "10AM-10PM",
+                "friday": "10AM-10PM",
+                "saturday": "10AM-10PM",
+                "sunday": "10AM-10PM"
+            }
+        },
+        {
+            "name": "Duff's Famous Wings, Amherst",
+            "address": "3651 Sheridan Dr, Amherst, NY 14226",
+            "latitude": 42.979323652567906, 
+            "longitude": -78.79834113295475,
+            "phone": "(716) 834-6234",
+            "hours": {
+                "monday": "10AM-10PM",
+                "tuesday": "10AM-10PM",
+                "wednesday": "10AM-10PM",
+                "thurday": "10AM-10PM",
+                "friday": "10AM-10PM",
+                "saturday": "10AM-10PM",
+                "sunday": "10AM-10PM"
+            }
         }
     ]
 }

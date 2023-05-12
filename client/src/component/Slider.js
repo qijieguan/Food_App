@@ -83,10 +83,8 @@ const Slider = () => {
     return (
        
         <div className='slider flex'>
-            {featured_items.length ? 
-                featured_items.map(item => 
-                    <Slide item={item} key={uuid()} /> 
-                ) : ""
+            {featured_items && 
+              featured_items.map(item => <Slide item={item} key={uuid()} /> ) 
             }
         
             <div className='nav-arrows'>

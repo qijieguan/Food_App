@@ -6,6 +6,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 
 const PlacesAutocomplete = ( {setSelected} ) => {
 
+
     const {
         ready,
         value,
@@ -19,12 +20,11 @@ const PlacesAutocomplete = ( {setSelected} ) => {
         setValue(address, false);
 
         clearSuggestions();
+        //const results = await getGeocode({ address });
+        //const { lat, lng } = await getLatLng(results[0]);
 
-        const results = await getGeocode({ address });
-        const { lat, lng } = await getLatLng(results[0]);
-        setSelected({ lat, lng });
-
-    }
+        return setSelected(address);
+    }  
 
     return (
         <div className='combobox flex'>
