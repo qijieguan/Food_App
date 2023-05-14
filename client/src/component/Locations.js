@@ -8,14 +8,20 @@ import Map from './Map.js';
 import PlacesAutocomplete from './Autocomplete.js';
 import SearchResults from './SearchResults.js';
 import { useJsApiLoader } from '@react-google-maps/api';
-import { DistanceMatrixService } from '@react-google-maps/api';
+
+import { useDispatch } from 'react-redux';
+import { clearPlaces } from './actions/index.js';
 
 const Locations = () => {
 
     const [libraries] = useState(['places']);
     const [origin, setOrigin] = useState(null);
 
-    useEffect(() => {sessionStorage.clear()});
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(clearPlaces()); 
+    }, [origin]);
 
     const { isLoaded } = useJsApiLoader({ googleMapsApiKey: process.env.REACT_APP_API_KEY, libraries });
 

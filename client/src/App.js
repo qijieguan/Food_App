@@ -8,20 +8,32 @@ import Footer from './component/Footer.js';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 
+import { legacy_createStore as createStore } from 'redux';
+import allReducers from './component/reducers';
+import { Provider } from 'react-redux';
+
+const store = createStore(
+  allReducers, 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header/>
-        <Routes>
-          <Route path='/' element={<Home/>} exact/>
-          <Route path='/Menu' element={<Menu/>} exact/>
-          <Route path='/Flavors' element={<Flavors/>} exact/>
-          <Route path='/Menu/:Item' element={<ItemPage/>} exact/>
-          <Route path='/Locations' element={<Locations/>} exact/>
-        </Routes>
-        <Footer/>
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <Header/>
+          <Routes>
+            <Route path='/' element={<Home/>} exact/>
+            <Route path='/Menu' element={<Menu/>} exact/>
+            <Route path='/Flavors' element={<Flavors/>} exact/>
+            <Route path='/Menu/:Item' element={<ItemPage/>} exact/>
+            <Route path='/Locations' element={<Locations/>} exact/>
+          </Routes>
+          <Footer/>
+        </Router>
+      </Provider>
     </div>
   );
 }

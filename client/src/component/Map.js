@@ -5,12 +5,15 @@ import uuid from 'react-uuid';
 import { DirectionsRenderer } from '@react-google-maps/api';
 import { useState, useEffect } from 'react';
 
+import { useSelector } from 'react-redux';
+
 const Map = ({ origin }) => { 
 
     const [markers, setMarkers] = useState(Data.markers);
     const [zoom, setZoom] = useState(4);
     const [directions, setDirections] = useState(null);
     
+    const places = useSelector(state => state.places);
 
     window.addEventListener('resize', (e) => {
         if (window.innerWidth <= 560) { setZoom(3); }
@@ -18,15 +21,20 @@ const Map = ({ origin }) => {
     });
 
     useEffect(() => {  
-        if (origin) {
-                sessionStorage.removeItem('closest');  
-                markers.forEach((marker, index) => {
-                calcDist(marker, index);
-            });  
+        if (origin && places.length) {
+            let result = null;
+            places.forEach(place => {
+                if (!result || place.distance < result.distance) {
+                    result = place;
+                    setTimeout(() => {
+                        renderDirection(result.marker);
+                    }, 2000)
+                }
+            });
         }
-    }, [origin]);
+    }, [origin, places]);
 
-    const calcDist = async (marker, index) => {
+    const renderDirection = async (marker) => {
         const directionsService = new window.google.maps.DirectionsService();
        
         await directionsService.route(
@@ -37,33 +45,11 @@ const Map = ({ origin }) => {
             },
             (result, status) => {
                 if (status === 'OK' && result) {  
-
-                    let distance = Number(result.routes[0].legs[0].distance.text.replace(" mi", "").replace(",", "")); 
-                    let closest = JSON.parse(sessionStorage.getItem('closest'))
-
-                    if (!closest || Number(closest.distance) > distance) {
-                        sessionStorage.setItem('closest', JSON.stringify({result: result, distance: distance}));
-                    }
-                    if (markers.length === index + 1) { 
-                        if (sessionStorage.getItem('closest')) {
-                            setDirections(JSON.parse(sessionStorage.getItem('closest')).result);
-                        }   
-                    }
+                    setDirections(result);
                 }
             }
         )     
     }
-
-    /*
-        <DistanceMatrixService
-            options={{
-                destinations: ["4690 Convoy St Suite 102, San Diego, CA 92111"],
-                origins: ["El Monte High School"],
-                travelMode: "DRIVING",
-            }}
-            callback = {(response) => {console.log(response.rows[0].elements[0].distance.text)}}
-        />
-    */
 
     return (
         <div id="map">
@@ -72,7 +58,7 @@ const Map = ({ origin }) => {
                 zoom={zoom}
                 center={{lat: 47.1164, lng: -101.2996}}
             >
-                {origin && directions && sessionStorage.getItem('closest') && 
+                {directions &&
                     <DirectionsRenderer directions={directions}/>
                 }
                 {markers && markers.length &&

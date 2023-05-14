@@ -1,31 +1,46 @@
 import './styles/search-results.css';
-import Data from './jsons/Markers.json';
 import { useState, useEffect } from 'react';
+
+import Data from './jsons/Markers.json';
 import uuid from 'react-uuid';
+
 import { FiPhoneCall } from 'react-icons/fi';
 import { TfiLocationPin } from 'react-icons/tfi';
 import { FaCarSide } from 'react-icons/fa';
 import { BiTimeFive } from 'react-icons/bi';
 
-const SearchResults = ({origin}) => {
+import { useSelector, useDispatch } from 'react-redux';
+import { setPlaces, clearPlaces } from './actions/index.js';
 
+const SearchResults = ({origin}) => {
     
     const [defaultMarkers, setDefault] = useState(Data.markers);
-    const [markers, setMarkers] = useState([]);
+    const [markers, setMarkers] = useState(null);
+    const [render, setRender] = useState(false);
 
+    const places = useSelector(state => state.places);
+    const dispatch = useDispatch();
 
-    useEffect(() => {
-        
-        if (origin) { 
-            sessionStorage.removeItem('nearby');  
+    useEffect(() => { 
+        if (origin && !places.length) {
             defaultMarkers.forEach(async (marker, index) => {
-                await nearbyMarkers(marker, index);
+                setTimeout(async () => {
+                    await searchPlaces(marker, index);  
+                }, 1000)
             }); 
         }
-       
-    }, [origin, defaultMarkers]);
 
-    const nearbyMarkers = async (marker, index) => {
+        if (render) {
+            setMarkers(places);
+            setTimeout(() => {
+                dispatch(clearPlaces()); 
+            }, 500)
+            setRender(false);
+        }
+
+    }, [origin, defaultMarkers, render]);
+
+    const searchPlaces = async (marker, index) => {
 
         const directionsService = new window.google.maps.DirectionsService();
 
@@ -38,20 +53,11 @@ const SearchResults = ({origin}) => {
             (result, status) => {
                 if (status === 'OK' && result) {
                     let distance = Number(result.routes[0].legs[0].distance.text.replace(" mi", "").replace(",", "")); 
-                    if (distance <= 1000) {
-                        if (!sessionStorage.getItem('nearby')) {
-                            sessionStorage.setItem('nearby', JSON.stringify({markers: [{marker: marker, distance: distance}]}));
-                        }
-                        else {
-                            let nearby = JSON.parse(sessionStorage.getItem('nearby')).markers;
-                            sessionStorage.setItem('nearby', JSON.stringify({markers: [...nearby, {marker: marker, distance: distance}]}))
-                        }
+                    if (distance <= 500) {
+                        dispatch(setPlaces({marker: marker, distance: distance}));
                     }
                     if (defaultMarkers.length === index + 1) { 
-                        if (sessionStorage.getItem('nearby')) {
-                            let nearby = JSON.parse(sessionStorage.getItem('nearby')).markers;
-                            setMarkers(nearby);
-                        }   
+                        setRender(true);
                     }
                 }
             }
@@ -60,7 +66,7 @@ const SearchResults = ({origin}) => {
 
     return (
         <div className='search-results flex'>
-            {markers.length ?
+            {markers && markers.length ?
                 <div className='search-list flex'>
                     { markers.map(marker => 
                         <div className='search flex' key={uuid()}>
