@@ -1,13 +1,15 @@
 .item-page {
-    margin-top: 17.5vh;
+    padding-top: 17.5vh;
     justify-content: center;
     flex-wrap: wrap;
+    min-height: 100vh;
     width: 100%;
+    background: black;
 }
 
 .item-header {
-    padding: 0 5vw;
     margin-right: 3vw;
+    margin-bottom: 5vh;
     min-height: 5vh;
     width: 80%;
     column-gap: 1vw;
@@ -19,7 +21,7 @@
     font-size: clamp(1rem, 1.5vw, 1.5rem); 
     font-weight: 100; 
     font-family: 'Open Sans', sans-serif;
-    color: rgb(122, 122, 122); 
+    color: rgb(180, 180, 180); 
 }
 
 .menu-link:hover { color: olivedrab; text-decoration: underline; text-underline-offset: under; }
@@ -27,15 +29,17 @@
 .item-header > div { padding-left: 1vw; border-left: 1px solid; }
 
 .item-left {
-    padding: 0 5vw;
+    padding: 0 5vw 10vh 5vw;
     max-height: 80%;
-    max-width: 40%;
+    max-width: 45%;
     object-fit: cover;
 }
 
 .item-right {
     margin-left: 3vw;
-    padding: 0 5vw;
+    margin-bottom: auto;
+    padding: 0 2vw 10vh 2vw;
+    max-height: 80%;
     max-width: 45%;
 }
 
@@ -44,12 +48,13 @@
     font-size: clamp(1.5rem, 3vw, 3rem);
     font-weight: bolder;
     font-style: oblique;
+    color: orange;
 }
 
 .item-right-content {
     font-size: clamp(1rem, 1.25vw, 1.25rem);
     font-weight: 300;
-    color: rgb(56, 56, 56);
+    color: rgb(180, 180, 180);
 }
 
 .item-right > button {
@@ -59,36 +64,42 @@
     font-weight: bolder;
     font-style: oblique;
     width: 100%;
-    color: white;
-    background: green;
-    box-shadow: 0 0 3px rgb(231, 231, 231);
+    background: olivedrab;
+    box-shadow: 0 0 3px;
     border-radius: 0.25rem;
 } 
 
+.item-right > button:hover {
+    opacity: 0.7;
+}
+
 .item-footer {
-    margin: 5vh auto 0 auto;
+    margin: auto auto 0 auto;
     padding: 5vh 10vw;
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
-    background: rgb(219, 219, 219);
+    background: rgb(20, 20, 20);
 }
 
 .item-footer > h1 {
     font-weight: 300;
     font-family: sans-serif;
+    font-size: clamp(0.875rem, 1vw, 1rem);
     text-transform: capitalize;
     width: 75%;
-    color: rgb(59, 59, 59);
+    color: rgb(180, 180, 180);
 }
 
 @media (max-width: 75rem) {
-    .item-page { margin-top: 5vh; }
+    .item-page { padding-top: 5vh; }
 }
 
-@media (max-width: 50rem) {
-    .item-header { margin-right: 0; margin-bottom: 5vh; padding: 0 2vw; column-gap: 2vw; flex-wrap: wrap; width: 100%; }
+@media (max-width: 65rem) {
+    .item-page { padding-top: 5vh; }
+    .item-header { margin-right: 0; padding: 0 2vw; column-gap: 2vw; flex-wrap: wrap; width: 100%; }
     .item-header > div { padding-left: 2vw; }
-    .item-left { max-width: 100%; }
-    .item-right { margin-left: 0; max-width: 100%; }
+    .item-left { max-width: 100%; padding: 0 5vw; }
+    .item-right { padding: 2vh 2vw; margin-left: 0; margin-bottom: 5vh; max-width: 100%; }
+    .item-footer { padding: 2vh 0; }
 }

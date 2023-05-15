@@ -24,6 +24,7 @@
     font-size: clamp(2rem, 3vw, 3rem);
     font-weight: bolder;
     font-style: oblique;
+    color: orange;
 }
 
 .flavor {

@@ -45,7 +45,7 @@ const PlacesAutocomplete = ( {setSelected} ) => {
                     <ComboboxList>
                         {
                             data.map(({ place_id, description }) => 
-                                <ComboboxOption key={place_id} value={description}/>
+                                <ComboboxOption className='combobox-option' key={place_id} value={description}/>
                             )
                         }
                     </ComboboxList>

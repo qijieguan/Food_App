@@ -1,7 +1,8 @@
 .slider { 
     margin: 0 auto;
-    margin-top: 25vh;
+    padding-top: 25vh;
     min-height: 75vh;
+    background: black;
     scroll-snap-type: x mandatory; 
     overflow-x: scroll;
     will-change: scroll-position;
@@ -18,8 +19,8 @@
     top: 50%;
     font-size: 10rem;
     height: fit-content;
-    color: white;
-    box-shadow: 0 5px 8px rgb(163, 163, 163);
+    background: green;
+    box-shadow: 0 5px 5px;
     border-radius: 2rem;
 }
 
@@ -31,29 +32,29 @@
     right: 2%;
 }
 
-.left-arrow:hover, .right-arrow:hover { background: darkgreen; }
+.left-arrow:hover, .right-arrow:hover { opacity: 0.7; }
 
-.left-arrow-icon, .right-arrow-icon { font-size: 1.25rem; color: darkgreen; }
+.left-arrow-icon, .right-arrow-icon { font-size: 1.25rem; color: rgb(180, 180, 180); }
 .left-arrow:hover .left-arrow-icon, .right-arrow:hover .right-arrow-icon { color: white; }
 
 @media (max-width: 75rem) {
-    .slider { margin-top: 15vh; }
+    .slider { padding-top: 15vh; }
 }
 
 @media (max-width: 50rem) {
-    .slider { margin-top: 10vh; }
+    .slider { padding-top: 10vh; }
 }
 
 
 @media (max-width: 25rem) {
-    .slider { margin-top: 5vh; }
-    .left-arrow, .right-arrow { top: 40%; }
+    .slider { padding-top: 5vh; }
+    .left-arrow, .right-arrow { top: 40%; opacity: 0.4; }
 }
 
 
 @media (max-width: 15rem) {
-    .slider { margin-top: 0; }
-    .left-arrow, .right-arrow { top: 35%; opacity: 0.4; }
+    .slider { padding-top: 0; }
+    .left-arrow, .right-arrow { top: 35%; }
     .left-arrow:hover, .right-arrow:hover { opacity: 1; }
 }
 

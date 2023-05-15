@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 
 const Map = ({ origin }) => { 
 
-    const [markers, setMarkers] = useState(Data.markers);
+    const [markers, setMarkers] = useState(null);
     const [zoom, setZoom] = useState(4);
     const [directions, setDirections] = useState(null);
     
@@ -21,6 +21,10 @@ const Map = ({ origin }) => {
     });
 
     useEffect(() => {  
+        if (!markers) {
+            setMarkers(Data.markers);
+        }
+
         if (origin && places.length) {
             let result = null;
             places.forEach(place => {
@@ -61,11 +65,9 @@ const Map = ({ origin }) => {
                 {directions &&
                     <DirectionsRenderer directions={directions}/>
                 }
-                {markers && markers.length &&
+                {markers &&
                     markers.map(marker => 
-                        <Marker className="marker" key={uuid()} position={{lat: marker.latitude, lng: marker.longitude}}>
-                            
-                        </Marker>
+                        <Marker className="marker" key={uuid()} position={{lat: marker.latitude, lng: marker.longitude}}/>
                     )
                 }
                 <div className='map-overlay'/>

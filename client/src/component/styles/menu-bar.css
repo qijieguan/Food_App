@@ -1,7 +1,14 @@
-.menu-bar { position: relative; padding: 0.5vh 3vw; box-shadow: 0 2px 3px rgb(182, 182, 182); z-index: 3; }
+.menu-bar { 
+    position: relative; 
+    padding: 0.5vh 3vw; 
+    background: black; 
+    box-shadow: 0 3px 3px rgb(29, 29, 29);
+    z-index: 3; 
+}
 
 .menu-icon {
     font-size: 1.25rem;
+    color: rgb(180, 180, 180);
 }
 
 .logo-wrapper {
@@ -19,7 +26,7 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background: white;
+    background: black;
     z-index: 1;
 }
 
@@ -33,13 +40,13 @@
     margin-right: auto;
     text-transform: uppercase;
     font-weight: 700;
-    color: rgb(63, 63, 63);
+    color: rgb(180, 180, 180);
 }
 
-.user-icon { height: 5vh; width: 5vh; color: darkgreen; }
+.user-icon { height: 5vh; width: 5vh; color: green; }
 
-.close-icon { height: 4vh; width: 4vh; color: rgb(179, 179, 179); transition: all 0.3s ease-in; }
-.close-icon:hover { transform: rotate(90deg); color: rgb(32, 32, 32); }
+.close-icon { height: 4vh; width: 4vh; color: rgb(180, 180, 180); transition: all 0.3s ease-in; }
+.close-icon:hover { transform: rotate(90deg); opacity: 0.7; }
 
 .menu-bar-dropdown > img {
     margin: 0 auto;
@@ -58,14 +65,14 @@
     font-style: oblique;
     text-transform: uppercase;
     width: 100%;
-    color: rgb(63, 63, 63);
-    border: 1px solid rgb(197, 197, 197);
-    border-top: none;
+    color: rgb(180, 180, 180);
+    border-bottom: 1px solid;
 }
 
 .menu-bar-li:hover {
     text-underline-position: under;
     text-decoration: underline 3px;
+    text-decoration-color: olivedrab;
 }
 
 .dropdown-footer {
@@ -81,8 +88,8 @@
     column-gap: 2vw;
     width: 50%;
     color: white;
-    background: darkgreen;
-    border: 1px solid snow;
+    background: green;
+    border: 1px solid rgb(48, 48, 48);
 }
 
 .dropdown-footer > button > div { 

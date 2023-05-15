@@ -1,19 +1,20 @@
 .locations {
     position: relative;
     width: 100%;
-    height: 200vh;
-    overflow: hidden;
+    height: 125vh;
+    background: black;
 }
 
 .locations-opener {
     display: none;
     padding: 2vh 3vw 2vh 1vw;
     justify-content: center;
+    column-gap: 1vw;
     position: absolute;
     top: 30%;
     left: 0;
-    color: darkorange;
-    background: white;
+    color: rgb(0, 170, 0);
+    background: black;
     border-radius: 0 0.5rem 0.5rem 0;
     box-shadow: 2px 0 3px rgb(124, 124, 124);
     z-index: 2;
@@ -21,6 +22,7 @@
 
 .locations-opener * { width: fit-content; }
 
+.locations-icon { font-size: clamp(1.375rem, 2vw, 2rem); }
 .locations-opener > div { flex-direction: column; align-items: flex-start; }
 
 .locations-opener > div > span {
@@ -40,12 +42,11 @@
     padding-top: 15vh;
     flex-direction: column;
     width: 35%;
-    min-height: 200vh;
-    background: white;
+    height: 100%;
+    background: rgb(15, 15, 15);
     box-shadow: 2px 0 3px gray;
     z-index: 2;
     transition: all 0.4s ease-in;
-    overflow-y: scroll;
 }
 
 .locations-wrapper.hide { display: none; width: 0; }
@@ -76,30 +77,38 @@
     font-weight: bolder;
     font-style: oblique;
     text-transform: uppercase;
+    color: rgb(180, 180, 180);
 }
 
 .order-options {
     position: relative;
     justify-content: space-around;
-    height: 7.5vh;
+    height: 10vh;
     border: 1px solid;
     border-radius: 2rem;
+    background: rgb(27, 27, 27);
     overflow: hidden;
+}
+
+.order-options > div:not(.active):hover {
+    opacity: 0.4;
+    cursor: pointer;
 }
 
 .carryout, .delivery {
     position: absolute;
     top: 0;
     column-gap: 1vw;
+    justify-content: center;
     height: 100%;
     width: 50%;
-    justify-content: center;
+    color: rgb(180, 180, 180);
 }
 
 .carryout { left: 0; }
 .delivery { right: 0; }
 
-.carryout.active, .delivery.active { width: 54%; background: black; color: white; z-index: 1; border-radius: 2rem; }
+.carryout.active, .delivery.active { width: 54%; color: white; background: green; z-index: 1; border-radius: 2rem; }
 
 .carryout > span, .delivery > span {
     font-size: clamp(0.875rem, 1vw, 1.5rem);
@@ -120,7 +129,7 @@
 
 @media (max-width: 40rem) {
     .locations-wrapper { width: 95%; box-shadow: 1px 1px 3px gray; }
-    .order-options { flex-direction: column; height: 15vh; border-radius: 1rem; }
+    .order-options { flex-direction: column; height: 20vh; border-radius: 1rem; }
     .carryout, .carryout.active, .delivery, .delivery.active {position: relative; width: 100%; border-radius: 0;}
     .car-side-icon, .fast-food-icon { display: unset; }
 }
