@@ -1,8 +1,9 @@
-import usePlacesAutocomplete, { getGeocode, getLatLng } from 'use-places-autocomplete';
-import { Combobox, ComboboxInput, ComboboxPopover, ComboboxList, ComboboxOption } from '@reach/combobox';
-import "@reach/combobox/styles.css";
 import './styles/autocomplete.css';
 import { AiOutlineSearch } from 'react-icons/ai';
+
+import usePlacesAutocomplete from 'use-places-autocomplete';
+import { Combobox, ComboboxInput, ComboboxPopover, ComboboxList, ComboboxOption } from '@reach/combobox';
+import "@reach/combobox/styles.css";
 
 const PlacesAutocomplete = ( {setSelected} ) => {
 
@@ -42,7 +43,7 @@ const PlacesAutocomplete = ( {setSelected} ) => {
                     />
                 </div>
                 <ComboboxPopover className='combobox-popover'>
-                    <ComboboxList>
+                    <ComboboxList className='combobox-list'>
                         {
                             data.map(({ place_id, description }) => 
                                 <ComboboxOption className='combobox-option' key={place_id} value={description}/>

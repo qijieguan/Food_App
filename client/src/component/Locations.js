@@ -3,10 +3,14 @@ import { FaCarSide } from 'react-icons/fa';
 import { BsArrowLeft } from 'react-icons/bs';
 import { MdFastfood } from 'react-icons/md';
 import { HiLocationMarker } from 'react-icons/hi';
+
 import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
+
 import Map from './Map.js';
 import PlacesAutocomplete from './Autocomplete.js';
 import SearchResults from './SearchResults.js';
+
 import { useJsApiLoader } from '@react-google-maps/api';
 
 import { useDispatch } from 'react-redux';
@@ -18,10 +22,11 @@ const Locations = () => {
     const [origin, setOrigin] = useState(null);
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        dispatch(clearPlaces()); 
+        dispatch(clearPlaces());
     }, [origin]);
 
     const { isLoaded } = useJsApiLoader({ googleMapsApiKey: process.env.REACT_APP_API_KEY, libraries });
@@ -44,7 +49,12 @@ const Locations = () => {
     }    
 
     const setSelected = (address) => {
-        setOrigin(address)
+        setOrigin(address);
+    }
+
+    const selectStore = (address) => {
+        sessionStorage.setItem('store', JSON.stringify(address));
+        navigate('/Menu');
     }
 
     return (
@@ -82,7 +92,7 @@ const Locations = () => {
                 }
 
                 {isLoaded &&
-                    <SearchResults origin={origin}/>
+                    <SearchResults origin={origin} selectStore={selectStore}/>
                 }
             </div>
             

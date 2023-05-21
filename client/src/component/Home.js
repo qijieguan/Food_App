@@ -1,10 +1,11 @@
-import Slider from './Slider.js';
+import Slideshow from './Slideshow.js';
 
 const Home = () => {
 
     return (
         <div className="home">
-          <Slider/>
+          
+          <Slideshow/>
         </div>
     )
 }

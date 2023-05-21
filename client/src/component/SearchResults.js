@@ -1,18 +1,17 @@
 import './styles/search-results.css';
-import { useState, useEffect } from 'react';
-
-import Data from './jsons/Markers.json';
-import uuid from 'react-uuid';
-
 import { FiPhoneCall } from 'react-icons/fi';
 import { TfiLocationPin } from 'react-icons/tfi';
 import { FaCarSide } from 'react-icons/fa';
 import { BiTimeFive } from 'react-icons/bi';
 
+import Data from './jsons/Markers.json';
+import uuid from 'react-uuid';
+
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setPlaces, clearPlaces } from './actions/index.js';
 
-const SearchResults = ({origin}) => {
+const SearchResults = ({origin, selectStore}) => {
     
     const [defaultMarkers, setDefault] = useState(Data.markers);
     const [markers, setMarkers] = useState(null);
@@ -79,7 +78,7 @@ const SearchResults = ({origin}) => {
                                 <BiTimeFive className='hours-icon'/>
                                 <span>10AM - 10PM </span>
                             </div>
-                            <div className='search-footer flex'>
+                            <div className='search-footer grid'>
                                 <div className='search-phone flex'>
                                     <FiPhoneCall/>
                                     <span>{marker.marker.phone}</span>
@@ -88,6 +87,9 @@ const SearchResults = ({origin}) => {
                                     <FaCarSide className='car-icon'/>
                                     <span>{marker.distance} mi</span>
                                 </div>
+                                <button className='select-store flex' 
+                                    onClick={() => {selectStore(marker.marker.address)}}
+                                >Carryout</button>
                             </div>
                         </div>)
                     }

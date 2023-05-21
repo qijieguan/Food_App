@@ -11,3 +11,31 @@ export const clearPlaces = data => {
         payload: data
     }
 }
+
+export const setQuantity = data => {
+    return {
+        type: 'SET_QUANTITY',
+        payload: data
+    }
+}
+
+export const clearQuantity = data => {
+    return {
+        type: 'CLEAR_QUANTITY',
+        payload: data
+    }
+}
+
+export const setCount = data => {
+    return {
+        type: 'SET_COUNT',
+        payload: data
+    }
+}
+
+export const clearCount = data => {
+    return {
+        type: 'CLEAR_COUNT',
+        payload: data
+    }
+}

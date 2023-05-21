@@ -1,11 +1,13 @@
 import './styles/map.css';
+
 import { GoogleMap, Marker } from '@react-google-maps/api';
-import Data from './jsons/Markers.json';
-import uuid from 'react-uuid';
 import { DirectionsRenderer } from '@react-google-maps/api';
 import { useState, useEffect } from 'react';
 
 import { useSelector } from 'react-redux';
+
+import Data from './jsons/Markers.json';
+import uuid from 'react-uuid';
 
 const Map = ({ origin }) => { 
 

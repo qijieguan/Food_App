@@ -1,8 +1,13 @@
 import './styles/menu.css';
 import Data from './jsons/Menu.json';
 import MenuItem from './MenuItem.js';
+
 import { Link } from 'react-router-dom';
 import uuid from 'react-uuid';
+
+import { clearQuantity, clearCount } from './actions';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 const Menu = () => {
 
@@ -13,6 +18,13 @@ const Menu = () => {
     const dips_and_flavors = Data.dips_and_flavors;
     const sides = Data.sides;
     const drinks = Data.drinks;
+
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(clearQuantity());
+        dispatch(clearCount());
+    }, []);
 
     const viewMenu = (e) => {
         let prevDrop = document.querySelector('.drop');

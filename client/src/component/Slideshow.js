@@ -1,11 +1,12 @@
-import './styles/slider.css';
+import './styles/slideshow.css';
+import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md';
+
 import Slide from './Slide.js';
 import { useEffect } from 'react';
-import { MdArrowBackIosNew, MdArrowForwardIos } from 'react-icons/md';
 import uuid from 'react-uuid';
 import Data from './jsons/Slides.json';
 
-const Slider = () => {
+const Slideshow = () => {
 
     const featured_items = Data.slides;
 
@@ -22,7 +23,7 @@ const Slider = () => {
 
     window.addEventListener('load', () => {
       setTimeout(() => {
-        let scrollElement = document.querySelector('.slider');
+        let scrollElement = document.querySelector('.slideshow');
         scrollElement.scrollLeft =  (scrollElement.scrollWidth - scrollElement.clientWidth ) / 2;
       });
     });
@@ -33,7 +34,7 @@ const Slider = () => {
 
     const init = () => {
       setTimeout(() => {
-        slider = document.querySelector('.slider');
+        slider = document.querySelector('.slideshow');
         slides = document.querySelectorAll('.slide');
 
         if (!clones.length) { cloneSlides(); }
@@ -73,16 +74,16 @@ const Slider = () => {
     }
 
     const scrollLeft = () => {
-      document.querySelector('.slider')?.scrollBy({top: 0, left: -document.body.clientWidth / 1.5, behavior: 'smooth'});
+      document.querySelector('.slideshow')?.scrollBy({top: 0, left: -document.body.clientWidth / 1.5, behavior: 'smooth'});
     }
 
     const scrollRight = () => {
-      document.querySelector('.slider')?.scrollBy({top: 0, left: document.body.clientWidth / 2, behavior: 'smooth'});
+      document.querySelector('.slideshow')?.scrollBy({top: 0, left: document.body.clientWidth / 2, behavior: 'smooth'});
     }
 
     return (
        
-        <div className='slider flex'>
+        <div className='slideshow flex'>
             {featured_items && 
               featured_items.map(item => <Slide item={item} key={uuid()} /> ) 
             }
@@ -107,4 +108,4 @@ const Slider = () => {
     )
 }
 
-export default Slider;
+export default Slideshow;

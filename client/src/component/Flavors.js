@@ -1,7 +1,8 @@
 import './styles/flavors.css';
-import Data from './jsons/Flavors.json';
 import uuid from 'react-uuid';
-import Flavor from './Flavor';
+
+import Flavor from './Flavor.js';
+import Data from './jsons/Flavors.json';
 
 const Flavors = () => {
 

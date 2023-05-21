@@ -1,5 +1,8 @@
 .menu-bar { 
     position: relative; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 1vh;
     padding: 0.5vh 3vw; 
     background: black; 
     box-shadow: 0 3px 3px rgb(29, 29, 29);
@@ -20,7 +23,19 @@
     width: 10vh;
 }
 
+.menu-bar-address {
+    min-height: 7.5vh;
+    max-width: 100% !important;
+}
+
+.menu-bar-address > span {
+    vertical-align: middle;
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    font-weight: 300;
+}
+
 .menu-bar-dropdown {
+    display: block;
     position: fixed;
     inset: 0 auto auto 0;
     flex-direction: column;
@@ -34,6 +49,7 @@
     justify-content: space-between;
     margin: 5vh 5vw;
     column-gap: 2.5vw;
+    width: 90%;
 }
 
 .dropdown-header > span {
@@ -54,6 +70,7 @@
 
 .menu-bar-nav {
     flex-direction: column;
+    width: 100%;
     border-top: 1px solid rgb(197, 197, 197);
 }
 
@@ -81,33 +98,38 @@
     width: 100%;
 }
 
-.dropdown-footer > button {
+.dropdown-footer-button {
     margin-top: auto;
     justify-content: center;
     padding: 1vh 2vw;
     column-gap: 2vw;
-    width: 50%;
+    width: 50vw;
     color: white;
     background: green;
     border: 1px solid rgb(48, 48, 48);
 }
 
-.dropdown-footer > button > div { 
+.dropdown-footer-button:hover {
+    opacity: 0.8;
+}
+
+.dropdown-footer-button > div { 
     margin-top: auto; 
     flex-direction: column; 
     align-items: flex-start;
     letter-spacing: 0.125rem;
 }
-.dropdown-footer > button > div > span:first-child { 
+.dropdown-footer-button > div > span:first-child { 
     font-size: clamp(0.75rem, 1.5vw, 1.25rem);
 }
-.dropdown-footer > button > div > span:last-child { 
+.dropdown-footer-button > div > span:last-child { 
     font-size: clamp(0.875rem, 1.75vw, 1.5rem); 
     font-weight: bolder; 
 }
 
+
 @media (max-width: 25rem) {
-    .dropdown-footer > button {
+    .dropdown-footer-button {
         flex-direction: column;
     }
 }
@@ -116,7 +138,7 @@
     .dropdown-footer {
         flex-direction: column;
     }
-    .dropdown-footer > button {
-        width: 100%;
+    .dropdown-footer-button {
+        width: 100vw;
     }
 }

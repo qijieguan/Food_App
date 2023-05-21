@@ -1,4 +1,4 @@
-.slider { 
+.slideshow { 
     margin: 0 auto;
     padding-top: 25vh;
     min-height: 75vh;
@@ -8,7 +8,7 @@
     will-change: scroll-position;
 }
 
-.slider::-webkit-scrollbar {
+.slideshow::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
 }
@@ -38,22 +38,22 @@
 .left-arrow:hover .left-arrow-icon, .right-arrow:hover .right-arrow-icon { color: white; }
 
 @media (max-width: 75rem) {
-    .slider { padding-top: 15vh; }
+    .slideshow { padding-top: 15vh; }
 }
 
 @media (max-width: 50rem) {
-    .slider { padding-top: 10vh; }
+    .slideshow { padding-top: 10vh; }
 }
 
 
 @media (max-width: 25rem) {
-    .slider { padding-top: 5vh; }
+    .slideshow { padding-top: 5vh; }
     .left-arrow, .right-arrow { top: 40%; opacity: 0.4; }
 }
 
 
 @media (max-width: 15rem) {
-    .slider { padding-top: 0; }
+    .slideshow { padding-top: 0; }
     .left-arrow, .right-arrow { top: 35%; }
     .left-arrow:hover, .right-arrow:hover { opacity: 1; }
 }

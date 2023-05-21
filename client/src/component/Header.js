@@ -1,19 +1,21 @@
 import './styles/header.css';
 import { FaCarSide } from 'react-icons/fa';
 import { MdFastfood } from 'react-icons/md';
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import MenuBar from './MenuBar.js';
-import { useLocation } from "react-router";
+import { HiLocationMarker } from 'react-icons/hi';
 
+import { Link } from 'react-router-dom';
+import { useLocation } from "react-router";
+import { useState, useEffect } from 'react';
+
+import MenuBar from './MenuBar.js';
 
 const Header = () => {
 
     const logo = "https://cdn.pixabay.com/photo/2017/09/23/21/21/label-2780146_960_720.png";
+    
+    const location = useLocation();
 
     const [showBar, setShowBar] = useState(false);
-
-    const location = useLocation();
 
     useEffect(() => {
 
@@ -47,22 +49,33 @@ const Header = () => {
                         <div>About Our Food</div>
                         <Link to='/Locations'>Locations</Link>
                     </nav>
-                    <div className='order flex'>
-                        <button className='carryout-button order-button flex'>
-                            <MdFastfood className='fast-food-icon'/>
-                            <div className='flex'>
-                                <span>Order </span>
-                                <span>Carryout</span>
-                            </div>
-                        </button>
-                        <button className='delivery-button order-button flex'>
-                            <FaCarSide className='car-side-icon'/>
-                            <div className='flex'>
-                                <span>Order </span>
-                                <span>Delivery</span>
-                            </div>
-                        </button>
-                    </div>
+                    {!sessionStorage.getItem('store') ?
+                        <div className='order flex'>
+                            <Link to='/Locations'>
+                                <button className='carryout-button order-button flex'>
+                                    <MdFastfood className='fast-food-icon'/>
+                                    <div className='order-button-text flex'>
+                                        <span>Order </span>
+                                        <span>Carryout</span>
+                                    </div>
+                                </button>
+                            </Link>
+                            <Link to="/Locations">
+                                <button className='delivery-button order-button flex'>
+                                    <FaCarSide className='car-side-icon'/>
+                                        <div className='order-button-text flex'>
+                                            <span>Order </span>
+                                            <span>Delivery</span>
+                                        </div>
+                                </button>
+                            </Link>
+                        </div>
+                        :
+                        <div className='header-address'>
+                            <HiLocationMarker className="location-icon" size={25}/>
+                            <span>{JSON.parse(sessionStorage.getItem('store'))}</span>
+                        </div>
+                    }
                 </div>
                 :
                 <MenuBar/>

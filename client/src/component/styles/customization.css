@@ -1,0 +1,144 @@
+.customization {
+    min-height: 50vh;
+    width: 100%;
+    background: rgb(22, 22, 22);
+}
+
+.label-tab {
+    margin-top: 10vh;
+    flex-direction: column;
+}
+
+.label-header { 
+    padding: 3vh 3vw;
+    column-gap: 1vw; 
+    width: 100%;
+    background: grey;
+    box-shadow: 0 0 3px;
+}
+
+.label-header > span {
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: bolder;
+    font-style: oblique;
+    vertical-align: middle;
+}
+
+.down-icon, .up-icon  {
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+    vertical-align: middle;
+}
+
+.up-icon { display: none; }
+
+.label-content {
+    margin: 5vh 0 7.5vh 0;
+    padding: 1vh 1vw;
+    flex-direction: column;
+    width: fit-content;
+    color: rgb(180, 180, 180);
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 1rem;
+}
+
+.label-name {
+    font-size: clamp(1rem, 1vw, 1.5vw);
+}
+
+.label-price {
+    color: grey;
+    font-weight: 300;
+}
+
+.label-calories {
+    color: grey;
+    font-weight: 300;
+}
+
+.flavor-tab {
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.flavor-header { 
+    padding: 3vh 3vw;
+    column-gap: 1vw; 
+    width: 100%;
+    background: grey;
+    box-shadow: 0 0 3px;
+}
+
+.flavor-header > span { 
+    font-size: clamp(1.5rem, 2vw, 2rem); 
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+.flavor-content {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    column-gap: 1vw;
+    row-gap: 5vh;
+    margin: 0 auto;
+    width: 90%;
+    height: 0;
+    background: rgb(22, 22, 22);
+    transition: all 0.4s ease-in;
+    overflow: hidden;
+}
+
+.flavor-header.dropdown + .flavor-content {
+    padding: 10vh 0;
+    height: fit-content;
+}
+
+.flavor-empty {
+    margin: 0 auto;
+    color: rgb(180, 180, 180);
+}
+
+.dip-tab {
+    flex-direction: column;
+}
+
+.dip-header { 
+    padding: 3vh 3vw;
+    column-gap: 1vw; 
+    width: 100%;
+    background: grey;
+    box-shadow: 0 0 3px;
+    overflow: hidden;
+}
+
+.dip-header > span { 
+    font-size: clamp(1.5rem, 2vw, 2rem); 
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+.dip-content {
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 2vw;
+    row-gap: 5vh;
+    width: 90%;
+    height: 0;
+    background: rgb(22, 22, 22);
+    transition: all 0.4s ease-in;
+    overflow: hidden;
+}
+
+.dip-header.dropdown + .dip-content {
+    padding: 10vh 0;
+    height: fit-content;
+}
+
+.dip-empty {
+    margin: 0 auto;
+    color: rgb(180, 180, 180);
+}
+
+.custom:not(.dropdown) > .down-icon { display: block; }
+.custom.dropdown > .down-icon { display: none; }
+.custom.dropdown > .up-icon { display: block; }

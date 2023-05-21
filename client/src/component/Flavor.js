@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
 import { GiChiliPepper } from 'react-icons/gi';
 import { BsFire } from 'react-icons/bs';
+
+import { useState, useEffect } from 'react';
+import uuid from 'react-uuid';
 
 const Flavor = ({flavor}) => {
 
@@ -25,12 +27,12 @@ const Flavor = ({flavor}) => {
             <div className='flavor-rating flex'>
                 {
                     Array.apply(null, { length: rating }).map((e, index) => {
-                        return <BsFire color={color}/>
+                        return <BsFire color={color} key={uuid()}/>
                     })
                 }
                 {
                     Array.apply(null, { length: 5 - rating }).map((e, index) => {
-                        return <BsFire color='grey'/>
+                        return <BsFire color='grey' key={uuid()}/>
                     })
                 }
             </div>

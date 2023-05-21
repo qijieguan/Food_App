@@ -41,13 +41,21 @@
 .combobox-popover {
     color: rgb(180, 180, 180);
     background: rgb(46, 46, 46);
+    border: 1px solid rgb(46, 46, 46) !important;
+    border-top: 1px solid rgb(32, 32, 32) !important;
     z-index: 3;
 }
 
+.combobox-option {
+    background: rgb(46, 46, 46);
+}
+
 .combobox-option:hover {
-    background: black;
+    background: black !important;
+    color: white; 
 }
 
 @media (max-width: 25rem) {
     .search-icon { display: none !important; }
+    .combobox-input { border-radius: 0.25rem; }
 }
