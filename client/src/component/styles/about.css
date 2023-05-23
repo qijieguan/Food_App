@@ -1,0 +1,43 @@
+.about {
+    padding-top: min(20vh, 5rem);
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    column-gap: 5vw;
+    color: rgb(180, 180, 180);
+    background: rgb(33, 33, 33);
+}
+
+.about-left {
+    margin-bottom: auto;
+    width: 40%;
+}
+
+.about-left > h1 {
+    font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+    color: olivedrab;
+}
+
+.about-left > p {
+    font-size: clamp(0.875rem, 1.25vw, 1.25rem);
+    color: rgb(180, 180, 180);
+}
+
+.about-right {
+    margin-top: 5%;
+    margin-bottom: auto;
+    height: 45vh;
+    max-width: 45%;
+    object-fit: cover;
+    border-radius: 2.5rem;
+}
+
+@media (max-width: 50rem) {
+    .about { padding: 5vh 7.5vw 5vh 0; flex-direction: column; row-gap: 5vh; }
+    .about-left { width: 95%; }
+    .about-right { height: 50vh; max-width: 95%; border-radius: 0.25rem; }
+}
+
+@media (max-width: 25rem) {
+    .about-right { height: 30vh; } 
+}

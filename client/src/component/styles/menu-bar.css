@@ -59,7 +59,7 @@
     color: rgb(180, 180, 180);
 }
 
-.user-icon { height: 5vh; width: 5vh; color: green; }
+.user-icon { height: 5vh; width: 5vh; color: rgb(0, 151, 0); }
 
 .close-icon { height: 4vh; width: 4vh; color: rgb(180, 180, 180); transition: all 0.3s ease-in; }
 .close-icon:hover { transform: rotate(90deg); opacity: 0.7; }
@@ -105,7 +105,7 @@
     column-gap: 2vw;
     width: 50vw;
     color: white;
-    background: green;
+    background: darkgreen;
     border: 1px solid rgb(48, 48, 48);
 }
 

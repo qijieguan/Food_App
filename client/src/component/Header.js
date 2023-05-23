@@ -44,9 +44,9 @@ const Header = () => {
                 <div className='header-scroll flex'>
                     <Link to='/' className='logo flex'><img className='logo-image' src={logo} alt=""/></Link>
                     <nav className="nav flex">
-                        <Link to='/Menu'>Our Menu</Link>
+                        <Link to='/Menu'>Menu</Link>
                         <Link to='/Flavors'>Flavors</Link>
-                        <div>About Our Food</div>
+                        <Link to='/About'>Our Story</Link>
                         <Link to='/Locations'>Locations</Link>
                     </nav>
                     {!sessionStorage.getItem('store') ?
