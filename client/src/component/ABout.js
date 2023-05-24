@@ -3,7 +3,7 @@ import './styles/about.css';
 const About = () => {
 
     const src = "https://cdn.pixabay.com/photo/2022/12/29/01/19/image-7684006_1280.jpg";
-
+    //
     return (
         <div className='about flex'>
             <div className='about-left'>
