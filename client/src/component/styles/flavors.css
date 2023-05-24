@@ -4,7 +4,6 @@
     padding: 0 2vw 10vh 2vw;
     row-gap: 7.5vh;
     min-height: 100vh;
-    width: 100%;
     color: rgb(235, 235, 235);
     background: black;
 }
@@ -15,7 +14,6 @@
     flex-direction: column;
     text-align: center;
     margin-bottom: 2vh;
-    width: 100%;
     color: rgb(218, 218, 218);
 }
 

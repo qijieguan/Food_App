@@ -2,7 +2,7 @@ import Header from './component/Header.js';
 import Home from './component/Home.js';
 import Menu from './component/Menu.js';
 import Flavors from './component/Flavors.js';
-import About from './component/ABout.js';
+import About from './component/About.js';
 import ItemPage from './component/ItemPage.js';
 import Locations from './component/Locations.js';
 import Footer from './component/Footer.js';

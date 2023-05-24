@@ -1,8 +1,6 @@
 .about {
-    padding-top: min(20vh, 5rem);
+    padding: 25vh 0;
     justify-content: center;
-    min-height: 100vh;
-    width: 100vw;
     column-gap: 5vw;
     color: rgb(180, 180, 180);
     background: rgb(33, 33, 33);
@@ -32,12 +30,16 @@
     border-radius: 2.5rem;
 }
 
+@media (max-width: 75rem) {
+    .about { padding: 7.5vh 0 10vh 0; }
+}
+
 @media (max-width: 50rem) {
-    .about { padding: 5vh 7.5vw 5vh 0; flex-direction: column; row-gap: 5vh; }
+    .about { padding: 5vh 0 10vh 0; flex-direction: column; row-gap: 5vh; }
     .about-left { width: 95%; }
     .about-right { height: 50vh; max-width: 95%; border-radius: 0.25rem; }
 }
 
 @media (max-width: 25rem) {
-    .about-right { height: 30vh; } 
+    .about-right { margin-right: 1vw; height: 30vh; } 
 }

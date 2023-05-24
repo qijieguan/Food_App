@@ -2,9 +2,11 @@
 .slide { width: 50%; scroll-snap-align: start; }
 
 .slide-wrapper {
-    margin: 0 10vw;
-    height: 90vh;
-    width: 30vw;
+    margin: 0 7.5vw;
+    padding: 4vh 2vw;
+    width: 35vw;
+    background: black;
+    border-radius: 0.25rem;
 }
 
 .slide-wrapper * { width: 100%; }
@@ -16,7 +18,7 @@
 }
 
 .slide-image {
-    height: 40%;
+    height: 40vh;
     object-fit: cover;
 }
 
@@ -42,10 +44,9 @@
 }
 
 .slide-button {
-    padding: 1vh 2vw;
+    padding: 3vh 2vw;
     justify-content: center;
     column-gap: 2vw;
-    height: 10vh;
     width: 100%;
     color: white;
     background: darkgreen;
@@ -55,7 +56,7 @@
 .slide-button:hover { opacity: 0.7; }
 
 .slide-button > span {
-    font-size: clamp(1rem, 1.25vw, 1.25rem);
+    font-size: clamp(0.875rem, 1.25vw, 1.25rem);
     font-weight: bold;
     font-style: oblique;
     width: fit-content;
@@ -66,13 +67,17 @@
     width: fit-content;
 }
 
+@media (max-width: 75rem) {
+    .slide-wrapper { margin: 0 5vw; width: 40vw; }
+}
+
 @media (max-width: 50rem) {
     .slide { width: 100%; }
-    .slide-wrapper { margin: 0 10vw; width: 80vw; }
+    .slide-wrapper { margin: 0 7.5vw; width: 85vw; }
 }
 
 @media (max-width: 25rem) {
-    .slide { padding: 1vh 0; box-shadow: 0 0 3px rgb(133, 133, 133); }
+    .slide {  box-shadow: 0 0 3px rgb(133, 133, 133); }
     .slide-wrapper { margin: 0; width: 100vw; height: fit-content; }
     .slide-image { height: 30%; }
     .slide-quote, .slide-label, .slide-content { padding: 0 2vw; }

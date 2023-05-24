@@ -1,0 +1,21 @@
+.home {
+    position: relative;
+}
+
+.home-bg {
+    position: absolute;
+    inset: 0 0 0 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0 0 0 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.7;
+}
