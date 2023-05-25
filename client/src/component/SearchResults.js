@@ -76,7 +76,7 @@ const SearchResults = ({origin, selectStore}) => {
                             </div>
                             <div className='search-hours flex'> 
                                 <BiTimeFive className='hours-icon'/>
-                                <span>10AM - 10PM </span>
+                                <span>Open 10AM - 10PM </span>
                             </div>
                             <div className='search-footer grid'>
                                 <div className='search-phone flex'>

@@ -6,7 +6,7 @@ import uuid from 'react-uuid';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCount } from './actions/index.js';
 
-const DipSlider = ({ dip, max, choice }) => {
+const DipSlider = ({ dip, max, choice, label }) => {
 
     const [id, setId] = useState(uuid());
     const [input, setInput] = useState(0);
@@ -30,6 +30,17 @@ const DipSlider = ({ dip, max, choice }) => {
                 sliderInput?.removeAttribute('disabled');
             }
         }
+
+        let sum = 0;
+        count.forEach(element => {
+            sum += Number(element.count);
+        });
+        
+        if ((!match.length && Number(sum) === Number(max)) || (label.includes('Sauce') && !label.includes(dip.label))) {
+            sliderContainer?.classList.add('hide');
+            sliderInput?.setAttribute("disabled", true);
+        }
+
     }, [dip, count]);
 
     const handleOnChange = (e) => {

@@ -1,0 +1,13 @@
+.quantity {
+    margin-left: 1vw;
+    column-gap: 1vw;
+    row-gap: 1vh;
+    flex-wrap: wrap;
+}
+
+.flavor-quantity {
+    padding: 1vh;
+    color: rgb(44, 44, 44);
+    border: 1px solid;
+    border-radius: 2rem;
+}

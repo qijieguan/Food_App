@@ -7,17 +7,16 @@
             "content": "1 crispy chicken sandwich with lettuce, tomato, and cheese and 1 flavor",
             "pieces": 1,
             "flavor": 1,
-            "dip": 0,
             "price": 4.99,
             "calories": 800
         },
         {
             "label": "Chicken Sandwhich Combo",
             "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682011805/Food/istockphoto-585602290-612x612_zetzgm.jpg",
-            "content": "1 chicken sandwich with 1 flavor, small fries, and 1 large cold drink",
+            "content": "1 chicken sandwich with 1 flavor, small fries, 1 large cold drink and 1 dip",
             "pieces": 1,
             "flavor": 1,
-            "dip": 0,
+            "dip": 1,
             "price": 7.99,
             "calories": 1100
         }
@@ -29,7 +28,6 @@
             "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682030450/Food/fried-chicken-nuggets-on-white-background_u9s9dw.jpg",
             "content": "8 chicken nuggets served with 2 dips of ranch, honey mustards, or ketchup",
             "pieces": 8,
-            "flavor": 0,
             "dip": 2,
             "price": 3.49,
             "calories": 429
@@ -39,7 +37,6 @@
             "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682546868/Food/organic-crispy-chicken-strips_avrvj5.jpg",
             "content": "4 chicken strips served with medium fries and 2 dips of ranch, honey mustards, or ketchup",
             "pieces": 4,
-            "flavor": 0,
             "dip": 2,
             "price": 3.99,
             "calories": 729     
@@ -137,23 +134,34 @@
 
     "dips_and_flavors": [
         {
+            "label": "Ketchup Sauce",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1684987906/Food/red-tasty-ketchup-or-tomato-sauce-in-bowl-isolated-on-white-background_v2ycyu.jpg",
+            "content": "1 ketchup dipping sauce to dip your chicken",
+            "dip": 10,
+            "price": 0,
+            "calories": 100
+        },
+        {
+            "label": "Ranch Sauce",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1684987754/Food/ranch-dressing-in-cup-isolated-on-white_f9exdw.jpg",
+            "content": "1 ranch flavor sauce to dip your wings",
+            "dip": 10,
+            "price": 0,
+            "calories": 100
+        },
+        {
             "label": "Classic Hot Sauce",
-            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682582085/Food/yellow-mustard-on-white-background_xf8a01.jpg",
-            "content": "1 classic hot flavor sauce for your wings",
+            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1684989221/Food/freshly-sriracha-hot-chilli-sauce-in-bowl-on-the-table_oa9tub.jpg",
+            "content": "1 classic hot flavor sauce to dip your wings",
+            "dip": 10,
             "price": 0.50,
             "calories": 100
         },
         {
-            "label": "Honey Garlic",
+            "label": "Honey Mustard Sauce",
             "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682582085/Food/yellow-mustard-on-white-background_xf8a01.jpg",
-            "content": "1 honey garlic flavor sauce for your wings",
-            "price": 0.50,
-            "calories": 100
-        },
-        {
-            "label": "Honey BBQ",
-            "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682582085/Food/yellow-mustard-on-white-background_xf8a01.jpg",
-            "content": "1 honey BBQ flavor sauce for your wings",
+            "content": "1 honey mustard flavor sauce to dip your wings",
+            "dip": 10,
             "price": 0.50,
             "calories": 100
         }
@@ -163,7 +171,7 @@
         {
             "label": "Regular Fries",
             "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1683066459/Food/french-fries-in-a-white-paper-box-isolated-on-white_dogvvr.jpg",
-            "content": "Regular fries served in small, medium, or large size",
+            "content": "Regular fries served in small, medium, or large size and 3 dips",
             "dip": 3,
             "price": 2.50,
             "calories": 300
@@ -171,7 +179,7 @@
         {
             "label": "Garlic Fries",
             "image": "https://res.cloudinary.com/dliw7yyw3/image/upload/v1683066459/Food/french-fries-in-a-white-paper-box-isolated-on-white_dogvvr.jpg",
-            "content": "Garlic fries served in small, medium, or large size",
+            "content": "Garlic fries served in small, medium, or large size and 3 dips",
             "dip": 3,
             "price": 2.50,
             "calories": 300

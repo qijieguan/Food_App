@@ -2,7 +2,7 @@ import './styles/about.css';
 
 const About = () => {
 
-    const src = "https://cdn.pixabay.com/photo/2022/12/29/01/19/image-7684006_1280.jpg";
+    const src = "https://res.cloudinary.com/dliw7yyw3/image/upload/v1684988132/Food/image-7684006_1280_lvcqe2.jpg";
     
     return (
         <div className='about flex'>

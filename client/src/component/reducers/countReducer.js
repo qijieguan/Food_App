@@ -1,7 +1,7 @@
 const countReducer = (state = [], action) => {
     switch (action.type) {
         case 'SET_COUNT':
-            return action.payload;
+            return [...action.payload];
         case 'CLEAR_COUNT':
             return [];
         default:

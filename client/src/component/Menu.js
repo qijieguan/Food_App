@@ -21,6 +21,8 @@ const Menu = () => {
 
     const dispatch = useDispatch();
 
+    const src = "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682580788/Food/honey-barbecue-boneless-wings_osewm1.jpg";
+
     useEffect(() => {
         dispatch(clearQuantity());
         dispatch(clearCount());
@@ -41,10 +43,11 @@ const Menu = () => {
 
     return (
         <div className="menu flex">
+            <div className='overlay'></div>
             <div className='special flex'>
                 <h1>Specials</h1>
                 <div className='flex'>
-                    <img src="https://res.cloudinary.com/dliw7yyw3/image/upload/v1682580788/Food/honey-barbecue-boneless-wings_osewm1.jpg" alt=""/>
+                    <img src={src} alt=""/>
                     <div>
                         <h1 className='special-label'>{specials[specials.length - 1].label}</h1>
                         <div className='special-content'>

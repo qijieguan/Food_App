@@ -1,8 +1,10 @@
 import './styles/customization.css';
-import { AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
+import { AiFillCaretRight } from 'react-icons/ai';
 
 import FlavorSlider from './FlavorSlider.js';
 import Dip from './DipSlider.js';
+import Quantity from './Quantity.js';
+import Count from './Count.js';
 
 import Flavors from './jsons/Flavors.json';
 import Dips from './jsons/Dips.json';
@@ -18,13 +20,14 @@ const Customization = ({ item }) => {
         e.currentTarget?.classList.toggle('dropdown');
     };
 
+
     return (
         <div className="customization">
 
             <div className='label-tab flex'>
                 <div className='label-header flex'>
+                    <AiFillCaretRight className='right-icon'/>
                     <span>{item.label}</span>
-                    <AiOutlineDown className='down-icon'/>
                 </div>
                 
                 <div className='label-content flex'>
@@ -36,9 +39,12 @@ const Customization = ({ item }) => {
             
             <div className='flavor-tab'>
                 <div className='flavor-header custom flex' onClick={(e) => {selectTab(e)}}>
+                    <AiFillCaretRight className='right-icon'/>
                     <span>Flavors</span>
-                    <AiOutlineDown className='down-icon'/>
-                    <AiOutlineUp className='up-icon'/>
+                    <Quantity/>
+                    {item.flavor &&
+                        <div className='flavor-required'>Flavors Required *</div>
+                    }
                 </div>
 
                 <div className='flavor-content flex'>
@@ -55,14 +61,14 @@ const Customization = ({ item }) => {
         
             <div className='dip-tab'>
                 <div className='dip-header custom flex' onClick={(e) => {selectTab(e)}}>
+                    <AiFillCaretRight className='right-icon'/>
                     <span>Dips</span>
-                    <AiOutlineDown className='down-icon'/>
-                    <AiOutlineUp className='up-icon'/>
+                    <Count/>
                 </div>
 
                 <div className='dip-content flex'>
                     {Object.hasOwn(item, 'dip') ?
-                        dips.map(dip => <Dip key={uuid()} max={item.dip} choice={item.dip} dip={dip}/>)
+                        dips.map(dip => <Dip key={uuid()} max={item.dip} choice={item.dip} dip={dip} label={item.label}/>)
                         :
                         <h1 className='dip-empty'>This product does not include dips.</h1>
                     }

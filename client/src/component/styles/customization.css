@@ -1,5 +1,6 @@
 .customization {
     min-height: 50vh;
+    width: 100%;
     background: rgb(22, 22, 22);
 }
 
@@ -16,6 +17,8 @@
     box-shadow: 0 0 3px;
 }
 
+.label-header > .right-icon { transform: rotate(90deg); }
+
 .label-header > span {
     font-size: clamp(1.5rem, 2vw, 2rem);
     font-weight: bolder;
@@ -23,12 +26,14 @@
     vertical-align: middle;
 }
 
-.down-icon, .up-icon  {
+.right-icon {
     font-size: clamp(2rem, 2.5vw, 2.5rem);
     vertical-align: middle;
+    transition: all 0.4s ease-in;
 }
 
-.up-icon { display: none; }
+.custom:not(.dropdown) > .right-icon { transform: rotate(0); }
+.custom.dropdown > .right-icon { transform: rotate(90deg); }
 
 .label-content {
     margin: 5vh 0 7.5vh 0;
@@ -60,8 +65,10 @@
 }
 
 .flavor-header { 
+    flex-wrap: wrap;
     padding: 3vh 3vw;
     column-gap: 1vw; 
+    row-gap: 1vh;
     width: 100%;
     background: grey;
     box-shadow: 0 0 3px;
@@ -71,6 +78,12 @@
     font-size: clamp(1.5rem, 2vw, 2rem); 
     font-weight: bolder;
     font-style: oblique;
+}
+
+.flavor-required {
+    margin-left: auto;
+    font-style: oblique;
+    color: rgb(52, 78, 0);
 }
 
 .flavor-content {
@@ -137,7 +150,3 @@
     margin: 0 auto;
     color: rgb(180, 180, 180);
 }
-
-.custom:not(.dropdown) > .down-icon { display: block; }
-.custom.dropdown > .down-icon { display: none; }
-.custom.dropdown > .up-icon { display: block; }

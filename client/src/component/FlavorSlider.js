@@ -38,6 +38,17 @@ const FlavorSlider = ({ flavor, choice, max }) => {
                 sliderInput?.removeAttribute('disabled');
             }
         }
+
+        let sum = 0;
+        quantity.forEach(element => {
+            sum += Number(element.count);
+        });
+
+        if (!match.length && Number(sum) === Number(max)) {
+            sliderContainer?.classList.add('hide');
+            sliderInput?.setAttribute("disabled", true);
+        }
+
     }, [flavor, quantity]);
 
     const handleOnChange = (e) => {

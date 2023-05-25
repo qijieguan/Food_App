@@ -76,9 +76,3 @@
     font-size: 0.875rem;
     color: white; 
 }
-
-@media (max-width: 25rem) {
-    .slider-container {
-        width: 100%;
-    }
-}
