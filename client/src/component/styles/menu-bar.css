@@ -1,9 +1,9 @@
 .menu-bar { 
     position: relative; 
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     row-gap: 1vh;
-    padding: 0.5vh 3vw; 
+    padding: 1vh 3vw; 
     background: black; 
     box-shadow: 0 3px 3px rgb(29, 29, 29);
     z-index: 3; 
@@ -24,6 +24,7 @@
 }
 
 .menu-bar-address {
+    position: relative;
     min-height: 7.5vh;
     max-width: 100% !important;
 }

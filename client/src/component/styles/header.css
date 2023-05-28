@@ -76,7 +76,29 @@
     font-size: 1.875rem;
 }
 
-.header-alt { column-gap: 1vw; }
+.header-alt { column-gap: 3vw; }
+
+.order-bag {
+    position: relative;
+    color: rgb(180, 180, 180);
+}
+
+.order-count {
+    position: absolute;
+    inset: 0 0 auto auto;
+    text-align: center;
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
+    min-width: 3.5vh;
+    color: white;
+    background: red;
+    transform: translate3d(33%, -33%, 0);
+    border-radius: 2rem;
+}
+
+.bag-icon {
+    font-size: clamp(2rem, 2.5vw, 2.5rem);
+    font-weight: 300;
+}
 
 .header-address {
     padding: 1vh 1vw;

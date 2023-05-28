@@ -2,15 +2,17 @@ import './styles/menu-bar.css';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { FaUserCircle, FaCarSide } from 'react-icons/fa';
 import { MdFastfood, MdClose } from 'react-icons/md';
-import { HiLocationMarker } from 'react-icons/hi';
+import { HiLocationMarker, HiOutlineShoppingBag } from 'react-icons/hi';
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { useSelector } from 'react-redux';
 
 const MenuBar = () => {
 
     const logo = "https://cdn.pixabay.com/photo/2017/09/23/21/21/label-2780146_960_720.png";
+
+    const order = useSelector(state => state.order);
 
     const [dropdown, setDropdown] = useState(false);
 
@@ -19,9 +21,17 @@ const MenuBar = () => {
             <AiOutlineMenu className='menu-icon' onClick={() => { setDropdown(true)} }/>
             <Link to='/' className='logo-wrapper flex'><img src={logo} className='logo' alt=""/></Link>
             {sessionStorage.getItem('store') &&
-                <div className='header-address menu-bar-address flex'>
-                    <HiLocationMarker className='location-icon'/>
-                    <span>{JSON.parse(sessionStorage.getItem('store'))}</span>
+                <div className='header-alt flex'>
+                    <Link to="/Order_Page" className='order-bag flex'>
+                        <HiOutlineShoppingBag className='bag-icon'/>
+                        {order.length > 0 &&
+                            <div className='order-count'>{order.length}</div>
+                        }
+                    </Link>
+                    <div className='header-address menu-bar-address flex'>
+                        <HiLocationMarker className='location-icon'/>
+                        <span>{JSON.parse(sessionStorage.getItem('store'))}</span>
+                    </div>
                 </div>
             }
             

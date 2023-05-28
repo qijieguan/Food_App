@@ -2,6 +2,7 @@ import Header from './component/Header.js';
 import Home from './component/Home.js';
 import Menu from './component/Menu.js';
 import Flavors from './component/Flavors.js';
+import OrderPage from './component/OrderPage.js';
 import About from './component/About.js';
 import ItemPage from './component/ItemPage.js';
 import Locations from './component/Locations.js';
@@ -30,6 +31,7 @@ function App() {
             <Route path='/Menu' element={<Menu/>} exact/>
             <Route path='/Flavors' element={<Flavors/>} exact/>
             <Route path='/Menu/:Item' element={<ItemPage/>} exact/>
+            <Route path='/Order_Page' element={<OrderPage/>} exact/>
             <Route path="/About" element={<About/>} exact/>
             <Route path='/Locations' element={<Locations/>} exact/>
           </Routes>

@@ -39,3 +39,17 @@ export const clearCount = data => {
         payload: data
     }
 }
+
+export const setOrder = data => {
+    return {
+        type: 'SET_ORDER',
+        payload: data
+    }
+}
+
+export const clearOrder = data => {
+    return {
+        type: 'CLEAR_ORDER',
+        payload: data
+    }
+}

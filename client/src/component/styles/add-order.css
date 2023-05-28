@@ -1,0 +1,14 @@
+.add-order {
+    float: right;
+    padding: 2vh 5vw;
+    margin: 7.5% 5% 0 0;
+    font-size: clamp(1rem, 1.375vw, 1.375rem);
+    font-weight: 700;
+    font-style: oblique;
+    background: gold;
+    border-radius: 2rem;
+}
+
+.add-order:hover {
+    opacity: 0.7;
+}

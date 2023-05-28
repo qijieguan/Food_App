@@ -5,11 +5,15 @@ import FlavorSlider from './FlavorSlider.js';
 import Dip from './DipSlider.js';
 import Quantity from './Quantity.js';
 import Count from './Count.js';
+import AddOrder from './AddOrder.js';
 
 import Flavors from './jsons/Flavors.json';
 import Dips from './jsons/Dips.json';
 
 import uuid from 'react-uuid';
+import { useSelector, useDispatch, shallowEqual } from 'react-redux';
+import { setOrder } from './actions';
+import { useState, useEffect } from 'react';
 
 const Customization = ({ item }) => {
 
@@ -19,7 +23,6 @@ const Customization = ({ item }) => {
     const selectTab = (e) => {
         e.currentTarget?.classList.toggle('dropdown');
     };
-
 
     return (
         <div className="customization">
@@ -75,6 +78,7 @@ const Customization = ({ item }) => {
                 </div>
             </div>
             
+            <AddOrder item={item}/>
         </div>
     )
 }

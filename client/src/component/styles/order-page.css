@@ -1,0 +1,14 @@
+.order-page {
+    padding: 20vh 5vw;
+    justify-content: space-around;
+    row-gap: 5vh;
+    flex-wrap: wrap;
+    height: fit-content;
+    background: rgb(33, 33, 33);
+    overflow: hidden;
+}
+
+@media (max-width: 75rem) {
+    .order-page { padding: 5vh 2vw; }
+}
+
