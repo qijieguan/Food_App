@@ -88,11 +88,11 @@
 
 .category.drop { border: 1px solid rgb(116, 116, 116); }
 
-.category > img { height: 15vh; width: 100%; object-fit: contain; }
+.category > img { padding: 0 1vw; height: 15vh; width: 100%; object-fit: contain; }
 .category.drop > h1 { padding: 5vh 0; }
 
 .category > h1 {
-    font-size: clamp(1.25rem, 1.75vw, 1.75rem);
+    font-size: clamp(1.125rem, 1.75vw, 1.75rem);
     font-weight: bold;
     font-style: oblique;
     color: orange;

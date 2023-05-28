@@ -8,18 +8,18 @@
     overflow-y: auto;
 }
 
-.carryout-address {
+.order-address {
     margin: 3vh 0;
     padding-bottom: 2vh;
     color: rgb(180, 180, 180);
     border-bottom: 1px solid rgb(180, 180, 180);
 }
 
-.carryout-address > span:first-child {
+.order-address > span:first-child {
     color: orange;
 }
 
-.carryout-address > span:last-child {
+.order-address > span:last-child {
     font-size: 0.875rem;
     font-weight: 300;
 }

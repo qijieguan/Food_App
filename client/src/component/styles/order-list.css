@@ -28,6 +28,12 @@
     border-bottom: 1px solid;
 }
 
+.order-empty {
+    margin-top: 20vh;
+    text-align: center;
+    color: rgb(180, 180, 180);
+}
+
 .order-item {
     color: rgb(180, 180, 180);
 }

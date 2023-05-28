@@ -20,7 +20,7 @@ const OrderTotal = () => {
 
     return (
         <div className='order-total'>
-            <h1 className='carryout-address'>
+            <h1 className='order-address'>
                 <span>Carryout from: </span>
                 <span>{JSON.parse(sessionStorage.getItem('store'))}</span>
             </h1>

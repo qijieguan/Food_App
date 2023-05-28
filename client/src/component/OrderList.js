@@ -10,12 +10,12 @@ const OrderList = () => {
     return (
         <div className='order-list'>
             <h1 className='order-label'>Order View</h1>
-            {order.length > 0 &&
+            {order.length > 0 ?
                 order.map(item => 
                     <div className='order-item' key={uuid()}>
                         <h1 className='item-label flex'>
                             <span>{item.label}</span> 
-                            <span>${item.price}</span>
+                            <span>${item.price.toFixed(2)}</span>
                         </h1>
                         <div className='order-quantity'>
                             {item.quantity.length > 0 &&
@@ -35,6 +35,8 @@ const OrderList = () => {
                         </div>
                     </div>
                 )
+                :
+                <h1 className='order-empty'>Try Adding Wings on Your Order</h1>
             }
         </div>
     )

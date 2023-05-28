@@ -5,7 +5,6 @@ import { MdFastfood } from 'react-icons/md';
 import { HiLocationMarker } from 'react-icons/hi';
 
 import { useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
 
 import Map from './Map.js';
 import PlacesAutocomplete from './Autocomplete.js';
@@ -22,7 +21,6 @@ const Locations = () => {
     const [origin, setOrigin] = useState(null);
 
     const dispatch = useDispatch();
-    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -54,7 +52,6 @@ const Locations = () => {
 
     const selectStore = (address) => {
         sessionStorage.setItem('store', JSON.stringify(address));
-        navigate('/Menu');
     }
 
     return (

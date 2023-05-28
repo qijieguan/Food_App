@@ -22,11 +22,7 @@
     border-radius: 1rem;
 }
 
-.search-list {
-    margin-bottom: auto;
-    flex-direction: column;
-    width: 100%;
-}
+.search-list { margin-bottom: auto; flex-direction: column; width: 100%; }
 
 .search-empty {
     margin: 2vh auto auto auto;
@@ -76,15 +72,9 @@
     font-size: clamp(0.75rem, 1vw, 1rem);
 }
 
-.search-footer {
-    grid-template-columns: 50% 50%;
-    width: 100%;
-}
+.search-footer { grid-template-columns: 50% 50%; width: 100%; }
 
-.search-phone, .search-distance {
-    margin-top: auto;
-    justify-content: center;
-}
+.search-phone, .search-distance { margin-top: auto; justify-content: center; }
 
 .search-phone {
     color: rgb(180, 180, 180);
@@ -92,14 +82,12 @@
     text-underline-position: below;
 }
 
-.search-distance {
-    color: orange;
-}
+.search-distance { color: orange; }
 
 .car-icon { font-size: 1.25rem; }
 .search-distance > span { font-size: clamp(0.875rem, 1.125vw, 1.125rem); }
 
-.select-store{
+.select-store {
     justify-content: center;
     padding: 1.5vh 1vw;
     margin: 2vh auto 0 auto;
@@ -112,6 +100,44 @@
 
 .select-store:hover { opacity: 0.7; }
 
+.carryout-label { font-size: clamp(1.75rem, 2.5vw, 2.5rem); color: white; }
+
+.carryout-close { float: right; }
+.carryout-close * { font-size: clamp(1.75rem, 2.5vw, 2.5rem); color: rgb(180, 180, 180); }
+.carryout-close *:hover { opacity: 0.7; }
+
+.carryout-detail { padding: 1vh; border: 1px solid rgb(180, 180, 180); border-radius: 2rem; }
+
+.carryout-location { color: white; }
+
+.carryout-address { font-weight: 300; color: rgb(180, 180, 180); }
+
+.carryout-buttons { margin: 5vh auto 0 auto; justify-content: space-evenly; flex-wrap: wrap; row-gap: 2vh; }
+
+.carryout-buttons > button {
+    margin: 0 auto;
+    padding: 2vh 0;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    font-weight: bold;
+    font-style: oblique;
+    border-radius: 0.5rem;
+    width: 40%;
+}
+
+.carryout-buttons > button:hover { opacity: 0.7; }
+
+.change-button {
+    color: rgb(180, 180, 180);
+    background: transparent;
+    border: 1px solid;
+}
+
+.confirm-button {
+    background: gold;
+    border: 2px solid black;
+}
+
 @media (max-width: 25rem) {
     .search { width: 95%; }
+    .carryout-buttons > button { width: 100%; }
 }
