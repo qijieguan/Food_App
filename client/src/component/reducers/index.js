@@ -1,14 +1,14 @@
 import placesReducer from "./placesReducer.js";
-import quantityReducer from "./quantityReducer.js";
-import countReducer from "./countReducer.js";
+import flavorsReducer from "./flavorsReducer.js";
+import dipsReducer from "./dipsReducer.js";
 import orderReducer from "./orderReducer.js";
 import { combineReducers } from 'redux';
 
 
 const allReducers = combineReducers({
     places: placesReducer,
-    quantity: quantityReducer,
-    count: countReducer,
+    flavors: flavorsReducer,
+    dips: dipsReducer,
     order: orderReducer,
 }); 
 

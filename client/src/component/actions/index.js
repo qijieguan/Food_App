@@ -12,30 +12,30 @@ export const clearPlaces = data => {
     }
 }
 
-export const setQuantity = data => {
+export const setFlavors = data => {
     return {
-        type: 'SET_QUANTITY',
+        type: 'SET_FLAVORS',
         payload: data
     }
 }
 
-export const clearQuantity = data => {
+export const clearFlavors = data => {
     return {
-        type: 'CLEAR_QUANTITY',
+        type: 'CLEAR_FLAVORS',
         payload: data
     }
 }
 
-export const setCount = data => {
+export const setDips = data => {
     return {
-        type: 'SET_COUNT',
+        type: 'SET_DIPS',
         payload: data
     }
 }
 
-export const clearCount = data => {
+export const clearDips = data => {
     return {
-        type: 'CLEAR_COUNT',
+        type: 'CLEAR_DIPS',
         payload: data
     }
 }

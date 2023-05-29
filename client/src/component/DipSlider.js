@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import uuid from 'react-uuid';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { setCount } from './actions/index.js';
+import { setDips } from './actions/index.js';
 
 const DipSlider = ({ dip, max, choice, label }) => {
 
@@ -12,16 +12,16 @@ const DipSlider = ({ dip, max, choice, label }) => {
     const [input, setInput] = useState(0);
 
     const dispatch = useDispatch();
-    const count = useSelector(state => state.count);
+    const dips = useSelector(state => state.dips);
 
     useEffect(() => {
         let sliderContainer = document.getElementById(id)?.parentElement;
         let sliderInput = document.getElementById(id)?.querySelector('.dip-slider > .slider');
 
-        let match = count.filter(element => element.dip === dip.label);
+        let match = dips.filter(element => element.dip === dip.label);
 
-        if (!match.length && count) {
-            if (count.length === choice) {
+        if (!match.length && dips) {
+            if (dips.length === choice) {
                 sliderContainer?.classList.add('hide');
                 sliderInput?.setAttribute("disabled", true);
             }
@@ -32,7 +32,7 @@ const DipSlider = ({ dip, max, choice, label }) => {
         }
 
         let sum = 0;
-        count.forEach(element => {
+        dips.forEach(element => {
             sum += Number(element.count);
         });
         
@@ -41,11 +41,11 @@ const DipSlider = ({ dip, max, choice, label }) => {
             sliderInput?.setAttribute("disabled", true);
         }
 
-    }, [dip, count]);
+    }, [dip, dips]);
 
     const handleOnChange = (e) => {
         let sum = 0;
-        count.forEach(element => {
+        dips.forEach(element => {
             sum += Number(element.count);
         });
         
@@ -54,15 +54,15 @@ const DipSlider = ({ dip, max, choice, label }) => {
         setInput(e.target.value);
         sliderTransform(e.target.value);
 
-        if (!count.length) {
-            dispatch(setCount([...count, {dip: dip.label, count: e.target.value}]));
+        if (!dips.length) {
+            dispatch(setDips([...dips, {dip: dip.label, count: e.target.value}]));
         }
         else {
-            let COUNT = count;
+            let DIPS = dips;
             let match = false;
             
             if (Number(e.target.value) !== 0) {
-                COUNT.forEach(element => {
+                DIPS.forEach(element => {
                     if (element.dip === dip.label) {
                         element.count = e.target.value;
                         match = true;
@@ -70,13 +70,13 @@ const DipSlider = ({ dip, max, choice, label }) => {
                 });
             }
             else {
-                COUNT = COUNT.filter(element => element.dip !== dip.label);
+                DIPS = DIPS.filter(element => element.dip !== dip.label);
             }
 
             if (!match && Number(e.target.value) !== 0) {
-                COUNT = [...count, {dip: dip.label, count: e.target.value}]     
+                DIPS = [...dips, {dip: dip.label, count: e.target.value}]     
             } 
-            dispatch(setCount(COUNT));
+            dispatch(setDips(DIPS));
         }
     }
 

@@ -18,8 +18,8 @@ const OrderList = () => {
                             <span>${item.price.toFixed(2)}</span>
                         </h1>
                         <div className='order-quantity'>
-                            {item.quantity.length > 0 &&
-                                item.quantity.map(QTY => 
+                            {item.flavors.length > 0 &&
+                                item.flavors.map(QTY => 
                                     <div key={uuid()}> - {QTY.flavor} X {QTY.count} PC</div>    
                                 )
                             }

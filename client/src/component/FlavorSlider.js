@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import uuid from 'react-uuid';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { setQuantity } from './actions/index.js';
+import { setFlavors } from './actions/index.js';
 
 const FlavorSlider = ({ flavor, choice, max }) => {
 
@@ -16,7 +16,7 @@ const FlavorSlider = ({ flavor, choice, max }) => {
     const [color, setColor] = useState("red");
  
     const dispatch = useDispatch();
-    const quantity = useSelector(state => state.quantity);
+    const flavors = useSelector(state => state.flavors);
 
     useEffect(() => {
         if (rating === 1) { setColor('green'); }
@@ -26,10 +26,10 @@ const FlavorSlider = ({ flavor, choice, max }) => {
         let sliderContainer = document.getElementById(id)?.parentElement;
         let sliderInput = document.getElementById(id)?.querySelector('.flavor-slider > .slider');
 
-        let match = quantity.filter(element => element.flavor === flavor.label);
+        let match = flavors.filter(element => element.flavor === flavor.label);
 
-        if (!match.length && quantity) {
-            if (quantity.length === choice) {
+        if (!match.length && flavors) {
+            if (flavors.length === choice) {
                 sliderContainer?.classList.add('hide');
                 sliderInput?.setAttribute("disabled", true);
             }
@@ -40,7 +40,7 @@ const FlavorSlider = ({ flavor, choice, max }) => {
         }
 
         let sum = 0;
-        quantity.forEach(element => {
+        flavors.forEach(element => {
             sum += Number(element.count);
         });
 
@@ -49,12 +49,12 @@ const FlavorSlider = ({ flavor, choice, max }) => {
             sliderInput?.setAttribute("disabled", true);
         }
 
-    }, [flavor, quantity]);
+    }, [flavor, flavors]);
 
     const handleOnChange = (e) => {
 
         let sum = 0;
-        quantity.forEach(element => {
+        flavors.forEach(element => {
             sum += Number(element.count);
         });
         
@@ -63,11 +63,11 @@ const FlavorSlider = ({ flavor, choice, max }) => {
         setInput(e.target.value);
         sliderTransform(e.target.value);
 
-        if (!quantity.length) {
-            dispatch(setQuantity([...quantity, {flavor: flavor.label, count: e.target.value}]));
+        if (!flavors.length) {
+            dispatch(setFlavors([...flavors, {flavor: flavor.label, count: e.target.value}]));
         }
         else {
-            let QTY = quantity;
+            let QTY = flavors;
             let match = false;
             
             if (Number(e.target.value) !== 0) {
@@ -83,9 +83,9 @@ const FlavorSlider = ({ flavor, choice, max }) => {
             }
 
             if (!match && Number(e.target.value) !== 0) {
-                QTY = [...quantity, {flavor: flavor.label, count: e.target.value}]     
+                QTY = [...flavors, {flavor: flavor.label, count: e.target.value}]     
             } 
-            dispatch(setQuantity(QTY));
+            dispatch(setFlavors(QTY));
         }
     }
 

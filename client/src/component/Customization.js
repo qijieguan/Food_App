@@ -11,9 +11,6 @@ import Flavors from './jsons/Flavors.json';
 import Dips from './jsons/Dips.json';
 
 import uuid from 'react-uuid';
-import { useSelector, useDispatch, shallowEqual } from 'react-redux';
-import { setOrder } from './actions';
-import { useState, useEffect } from 'react';
 
 const Customization = ({ item }) => {
 

@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import uuid from "react-uuid";
 
 const Quantity = () => {
-    const quantity = useSelector(state => state.quantity);
+    const quantity = useSelector(state => state.flavors);
 
     useEffect(() => {
     

@@ -1,7 +1,7 @@
 import './styles/add-order.css';
 
 import { useSelector, useDispatch } from "react-redux";
-import { setOrder, clearQuantity, clearCount } from './actions';
+import { setOrder, clearFlavors, clearDips } from './actions';
 
 import { useNavigate } from "react-router-dom";
 
@@ -10,21 +10,21 @@ const AddOrder = ({item}) => {
     const navigate = useNavigate(); 
     const dispatch = useDispatch();
 
-    const quantity = useSelector(state => state.quantity);
-    const dips = useSelector(state => state.count);
+    const flavors = useSelector(state => state.flavors);
+    const dips = useSelector(state => state.dips);
     const order = useSelector(state => state.order);
 
     const handleAddOrder = () => {
         let orderObj;
 
         let sum = 0;
-        quantity.forEach(element => {
+        flavors.forEach(element => {
             sum += Number(element.count);
         });
         if (Number(item.pieces) === Number(sum) || !Object.hasOwn(item, 'flavor')) {
             orderObj = {
                 label: item.label,
-                quantity: quantity,
+                flavors: flavors,
                 price: item.price,
                 dips: dips
             }
@@ -35,8 +35,8 @@ const AddOrder = ({item}) => {
             else {
                 dispatch(setOrder([...order, orderObj]));
             }
-            dispatch(clearQuantity());
-            dispatch(clearCount());
+            dispatch(clearFlavors());
+            dispatch(clearDips());
 
             navigate('/Order_Page');
         }
@@ -46,7 +46,7 @@ const AddOrder = ({item}) => {
         }
     }
     return (
-        <button onClick={handleAddOrder} className="add-order">
+        <button onClick={() => {handleAddOrder()}} className="add-order">
             Add to Order
         </button>
     )

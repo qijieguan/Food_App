@@ -5,7 +5,7 @@ import MenuItem from './MenuItem.js';
 import { Link } from 'react-router-dom';
 import uuid from 'react-uuid';
 
-import { clearQuantity, clearCount } from './actions';
+import { clearFlavors, clearDips } from './actions';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
@@ -24,8 +24,8 @@ const Menu = () => {
     const src = "https://res.cloudinary.com/dliw7yyw3/image/upload/v1682580788/Food/honey-barbecue-boneless-wings_osewm1.jpg";
 
     useEffect(() => {
-        dispatch(clearQuantity());
-        dispatch(clearCount());
+        dispatch(clearFlavors());
+        dispatch(clearDips());
     }, []);
 
     const viewMenu = (e) => {

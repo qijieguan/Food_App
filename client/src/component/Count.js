@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import uuid from "react-uuid";
 
 const Count = () => {
-    const count = useSelector(state => state.count);
+    const count = useSelector(state => state.dips);
 
     useEffect(() => {
        
