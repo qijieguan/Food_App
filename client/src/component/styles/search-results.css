@@ -46,7 +46,7 @@
 .search-name {
     margin: 0;
     font-size: clamp(0.875rem, 1.125vw, 1.125rem);
-    color: orange;
+    color: gold;
 }
 
 .search-address, .search-hours, .search-phone, .search-distance {
@@ -82,7 +82,7 @@
     text-underline-position: below;
 }
 
-.search-distance { color: orange; }
+.search-distance { color: gold; }
 
 .car-icon { font-size: 1.25rem; }
 .search-distance > span { font-size: clamp(0.875rem, 1.125vw, 1.125rem); }
@@ -94,7 +94,7 @@
     font-size: clamp(0.875rem, 1.25vw, 1.25rem);
     font-weight: bolder;
     width: 75%;
-    background: orange;
+    background: gold;
     border-radius: 0.5rem;
 }
 

@@ -4,6 +4,7 @@
     column-gap: 1vw;
     width: fit-content;
     color: rgb(180, 180, 180);
+    background: rgb(33, 33, 33);
 }
 
 .slider-container.hide {
